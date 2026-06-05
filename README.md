@@ -17,10 +17,10 @@ A static civic data website scaffold exploring how Bellevue's local real estate 
 ## Run locally
 
 ```bash
-python3 -m http.server 4173
+npm start
 ```
 
-Then open <http://127.0.0.1:4173>.
+Then open <http://127.0.0.1:4173>. The server binds to `0.0.0.0` by default for preview environments and honors `PORT`/`HOST` when provided.
 
 ## Test
 

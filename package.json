@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "check:a11y": "node tests/accessibility-structure.test.js"
+    "check:a11y": "node tests/accessibility-structure.test.js",
+    "start": "node server.js"
   },
   "devDependencies": {}
 }
