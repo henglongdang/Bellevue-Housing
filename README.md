@@ -22,16 +22,6 @@ python3 -m http.server 4173
 
 Then open <http://127.0.0.1:4173>.
 
-## Public deployment
-
-This repository includes a GitHub Pages workflow at `.github/workflows/deploy-pages.yml`. After the branch is merged or pushed to `main` or `master` in a GitHub repository with Pages enabled for GitHub Actions, the live site URL will be shown in the workflow run under the `github-pages` environment.
-
-Expected GitHub Pages URL format:
-
-```text
-https://<github-owner>.github.io/Bellevue-Housing/
-```
-
 ## Test
 
 ```bash
