@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="An interactive civic investigation into Bellevue REET, housing market friction, infrastructure finance, and buyer affordability." />
+    <meta property="og:title" content="The Bellevue REET Project" />
+    <meta property="og:description" content="Explore how local real estate excise taxes shape listing prices, transactions, and civic trade-offs in Bellevue." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/open-house.svg" />
+    <title>The Bellevue REET Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="brand" href="#market-friction" aria-label="The Bellevue REET Project home">The Bellevue REET Project</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#market-friction">Market Friction</a></li>
+          <li><a href="#data-engine">The Data Engine</a></li>
+          <li><a href="#human-cost">The Human Cost</a></li>
+          <li><a href="#civic-dilemma">The Civic Dilemma</a></li>
+          <li><a href="#mobilize">Mobilize</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="market-friction" class="hero page-section" aria-labelledby="hero-title">
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/bellevue-poster.svg" aria-hidden="true">
+          Your browser can display the Bellevue skyline poster while final licensed drone footage is pending.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Policy &amp; Economic Landscape</p>
+          <h1 id="hero-title">Is a 0.25% Tax Variance Freezing Bellevue’s Housing Market?</h1>
+          <p class="hero-copy">An autonomous investigation into how local REET structures drive up listing prices and lock out buyers.</p>
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="btn btn-primary" href="#data-engine">Launch the Interactive REET Calculator</a>
+            <a class="btn btn-secondary" href="#mobilize">Sign the Council Petition</a>
+          </div>
+          <p class="source-note">Bellevue currently layers local REET 1 and REET 2 into a 0.50% local rate, while this prototype compares that burden with a 0.25% scenario for policy contrast.</p>
+        </div>
+      </section>
+
+      <section class="section-panel" aria-labelledby="flow-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive Diagram</p>
+          <h2 id="flow-title">The “Squeeze &amp; Inflate” Market Flow</h2>
+          <p>Follow the pathway from macro pressure to transaction chill. Hover or focus each card for a research annotation.</p>
+        </div>
+        <div class="flowchart" role="list" aria-label="Squeeze and inflate flowchart">
+          <article class="flow-step" role="listitem" tabindex="0" data-tooltip="Market cooling context is supported by recent Bellevue market data showing a $1.5M median sale price and year-over-year price decline.">
+            <span class="step-number">01</span>
+            <h3>Macro Trend</h3>
+            <p>Market enters a downtrend ⇒ home values stagnate.</p>
+          </article>
+          <span class="arrow" aria-hidden="true">→</span>
+          <article class="flow-step" role="listitem" tabindex="0" data-tooltip="Washington DOR local REET tables list Bellevue as a two-quarter local REET jurisdiction, creating a 0.50% local rate.">
+            <span class="step-number">02</span>
+            <h3>Seller’s Dilemma</h3>
+            <p>Seller must break even on mortgage but pays flat 0.50% local REET.</p>
+          </article>
+          <span class="arrow" aria-hidden="true">→</span>
+          <article class="flow-step" role="listitem" tabindex="0" data-tooltip="Policy research and broker interviews commonly describe sellers attempting to add transaction costs into list prices when demand allows.">
+            <span class="step-number">03</span>
+            <h3>Price Inflation</h3>
+            <p>Seller raises the list price by the tax amount, including tax-on-tax, to preserve proceeds.</p>
+          </article>
+          <span class="arrow" aria-hidden="true">→</span>
+          <article class="flow-step" role="listitem" tabindex="0" data-tooltip="In softer markets, transaction taxes can reduce seller flexibility, buyer affordability, and listing confidence.">
+            <span class="step-number">04</span>
+            <h3>Market Chill</h3>
+            <p>Buyer affordability drops → sellers pull listings → transactions stall.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="data-engine" class="page-section section-panel dark-panel" aria-labelledby="calculator-title">
+        <div class="section-heading">
+          <p class="eyebrow">The Data Engine</p>
+          <h2 id="calculator-title">Live REET Comparison Calculator</h2>
+          <p>Enter a sale price and compare Bellevue’s local REET burden with a peer local-rate scenario.</p>
+        </div>
+        <div class="calculator-grid">
+          <form id="reet-form" class="card form-card">
+            <label for="sale-price">Target sale price</label>
+            <input id="sale-price" name="sale-price" type="number" min="1" step="1000" value="1800000" inputmode="numeric" />
+            <fieldset>
+              <legend>Local comparison city</legend>
+              <label class="radio-row"><input type="radio" name="comparison" value="king-assumption" checked /> King County Unincorp. policy contrast, 0.25%</label>
+              <label class="radio-row"><input type="radio" name="comparison" value="seattle" /> Seattle, 0.50%</label>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Calculate</button>
+          </form>
+          <div class="card results-card" aria-live="polite">
+            <h3>Calculation Results</h3>
+            <table>
+              <caption>REET totals for selected sale price</caption>
+              <tbody id="results-body"></tbody>
+            </table>
+            <p id="economic-outcome" class="outcome-box"></p>
+          </div>
+          <div class="card chart-card">
+            <h3>Total REET Paid</h3>
+            <div class="bar-chart" aria-label="Bar chart comparing total REET paid">
+              <div class="bar-row"><span>Bellevue</span><div class="bar-track"><div id="bellevue-bar" class="bar bellevue"></div></div><strong id="bellevue-total"></strong></div>
+              <div class="bar-row"><span>Peer</span><div class="bar-track"><div id="peer-bar" class="bar peer"></div></div><strong id="peer-total"></strong></div>
+            </div>
+          </div>
+        </div>
+
+        <article class="map-card card" aria-labelledby="map-title">
+          <div>
+            <h3 id="map-title">Heat Map of Local REET</h3>
+            <p>Prototype municipal map using DOR-style local REET rate data. Hover or focus markers to inspect rates.</p>
+            <div class="legend"><span class="legend-swatch high"></span> 0.50% high-friction <span class="legend-swatch low"></span> 0.25% lower-friction</div>
+          </div>
+          <div class="map-shell" role="img" aria-label="Stylized King County local REET heat map">
+            <button class="map-marker high" style="--x:59%;--y:47%" data-city="Bellevue" data-rate="0.50%" data-label="High-friction">Bellevue</button>
+            <button class="map-marker high" style="--x:43%;--y:51%" data-city="Seattle" data-rate="0.50%" data-label="High-friction">Seattle</button>
+            <button class="map-marker high" style="--x:61%;--y:58%" data-city="Renton" data-rate="0.50%" data-label="High-friction">Renton</button>
+            <button class="map-marker low" style="--x:86%;--y:20%" data-city="Skykomish" data-rate="0.25%" data-label="Lower-friction">Skykomish</button>
+            <button class="map-marker high" style="--x:76%;--y:72%" data-city="King County Unincorp." data-rate="0.50%" data-label="Current DOR rate">Unincorp.</button>
+            <output id="map-tooltip" class="map-tooltip">Select a city marker.</output>
+          </div>
+        </article>
+      </section>
+
+      <section id="human-cost" class="page-section section-panel" aria-labelledby="human-title">
+        <div class="section-heading">
+          <p class="eyebrow">The Human Cost</p>
+          <h2 id="human-title">Interviews &amp; Fieldwork</h2>
+          <p>Broker notes, field observations, and market data translated into copy-editable civic storytelling.</p>
+        </div>
+        <div class="human-grid">
+          <article class="card audio-card">
+            <h3>Investigative Audio Player</h3>
+            <p class="transcript-intro">Three-minute narration placeholder summarizing a May 22, 2026 Bellevue broker interview about net-proceeds protection, buyer affordability, and the pricing baseline created by the local 0.50% REET.</p>
+            <audio controls preload="none" aria-label="Podcast narration about Bellevue REET and housing market friction">
+              Audio narration placeholder. Use the transcript below until a final licensed audio file is attached by the publishing workflow.
+            </audio>
+            <details>
+              <summary>Read narration script</summary>
+              <p>In a cooling market, the broker described sellers as calculating backward from the cash they need to clear. Bellevue’s local REET becomes part of the baseline, then buyers meet that burden through higher asking prices when demand permits. When demand softens, the gap appears as withdrawn listings, price cuts, or stalled negotiations.</p>
+            </details>
+          </article>
+          <aside class="timeline card" aria-label="Interview timeline">
+            <h3>Interview Timeline</h3>
+            <ol>
+              <li><time datetime="2026-05-22T12:02:00">05/22/2026 12:02 PM</time> – Conducted interview with Bellevue broker. <strong>Primary research.</strong></li>
+              <li><strong>Key Finding:</strong> Flat-rate transaction taxes can hit lower-income buyers hardest when costs are shifted into price.</li>
+              <li><strong>Key Finding:</strong> Sellers in Bellevue lean on the extra 0.50% as a list-price input when trying to preserve net proceeds.</li>
+              <li><strong>Derived observation:</strong> Multiple agents noted slowed transactions as interest rates rose.</li>
+            </ol>
+          </aside>
+        </div>
+        <div class="quotes">
+          <blockquote>“Sellers protect net margins fiercely in a downturn. Bellevue’s flat 0.50% REET does not just fund the city. It can prevent sales from happening in the first place.” <cite>Local Real Estate Agent, May 22, 2026</cite></blockquote>
+          <blockquote>“A buyer sees the monthly payment. A seller sees net proceeds. REET sits between them like a quiet wedge.” <cite>Field note synthesis</cite></blockquote>
+        </div>
+        <article class="field-observation card">
+          <div>
+            <h3>Field Observation: Open House</h3>
+            <p>During the open house, buyers asked less about finishes and more about total monthly carrying cost. Several paused at the combined pressure of prices, rates, and taxes. Redfin’s March 2026 Bellevue snapshot reported a $1.5M median sale price and a 6.7% year-over-year decline, underscoring a market that remains expensive even while cooling.</p>
+          </div>
+          <div class="artifact-grid">
+            <figure><img src="assets/open-house.svg" alt="Blurred open house event placeholder" /><figcaption>Open house photo placeholder</figcaption></figure>
+            <figure><img src="assets/flyer.svg" alt="Marketing flyer mock-up for a Bellevue home" /><figcaption>Marketing flyer mock-up</figcaption></figure>
+            <figure><img src="assets/sign-in.svg" alt="Open house sign-in sheet sample with redacted visitor details" /><figcaption>Redacted sign-in sheet</figcaption></figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="civic-dilemma" class="page-section section-panel dark-panel" aria-labelledby="civic-title">
+        <div class="section-heading">
+          <p class="eyebrow">The Civic Dilemma</p>
+          <h2 id="civic-title">Balanced Perspectives</h2>
+          <p>Any serious REET reform must account for affordability and infrastructure finance at the same time.</p>
+        </div>
+        <div class="split-screen">
+          <article class="card perspective market-view">
+            <h3>Market &amp; Consumer View</h3>
+            <ul>
+              <li>High flat REET can stall sales during downturns because sellers resist cutting below the net proceeds they need.</li>
+              <li>When sellers pass transaction costs into asking prices, buyers face a higher effective purchase cost.</li>
+              <li>A rigid local rate can discourage recovery if listings are withdrawn instead of repriced.</li>
+            </ul>
+          </article>
+          <article class="card perspective finance-view">
+            <h3>Public Finance View</h3>
+            <ul>
+              <li>Under RCW 82.46, cities may impose first and second quarter-percent REET for capital purposes.</li>
+              <li>Eligible projects include parks, streets, roads, bridges, transit-adjacent improvements, public safety facilities, and utility infrastructure.</li>
+              <li>Without REET revenue, Bellevue may need to defer capital projects or shift costs to other revenue sources.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="civic-questions card">
+          <h3>Key Civic Questions</h3>
+          <ol>
+            <li>How should Bellevue balance housing affordability with critical infrastructure funding?</li>
+            <li>Should local REET rates adapt to economic conditions or sale-price tiers?</li>
+            <li>What safeguards would protect middle-income buyers without starving capital budgets?</li>
+          </ol>
+          <label for="reflection">My Evolving Perspective</label>
+          <textarea id="reflection" rows="5" placeholder="After learning both sides, I now think..."></textarea>
+          <p class="small-note"><em>Policy trade-offs are complex: revenue stability, equity, and market liquidity may pull in different directions.</em></p>
+        </div>
+      </section>
+
+      <section id="mobilize" class="page-section section-panel" aria-labelledby="mobilize-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mobilize</p>
+          <h2 id="mobilize-title">Civic Action Hub</h2>
+          <p>Turn the research into a respectful, specific request for review by Bellevue elected officials.</p>
+        </div>
+        <div class="mobilize-grid">
+          <!-- Address this form to Bellevue City Council and the council revenue committee or equivalent finance review body. -->
+          <form id="council-form" class="card council-form" action="mailto:council@bellevuewa.gov" method="post" enctype="text/plain">
+            <h3>Council Email Form</h3>
+            <label for="name">Your Name</label>
+            <input id="name" name="name" autocomplete="name" />
+            <label for="address">Your Address</label>
+            <input id="address" name="address" autocomplete="street-address" />
+            <label for="message">Message Preview</label>
+            <textarea id="message" name="message" rows="10">Dear Mayor and Council,
+
+I urge you to review how our flat 0.50% REET affects housing affordability. Field data show sellers pad prices to cover this tax, worsening the gap for buyers. Please consider a flexible or graduated local REET that protects middle-income buyers while securing infrastructure revenue.
+
+Respectfully,</textarea>
+            <button class="btn btn-primary" type="submit">Send to Council</button>
+          </form>
+          <aside class="card kit-card">
+            <h3>Downloadable Advocacy Kit</h3>
+            <a class="download-tile" href="assets/testimony_guide.txt" download><span aria-hidden="true">📄</span><strong>Download Public Testimony Guide</strong><small>Text guide with protocol and a 3-minute speaking script.</small></a>
+            <a class="download-tile" href="assets/carousel_pack.txt" download><span aria-hidden="true">🖼️</span><strong>Download Social Media Infographics</strong><small>Text outline for future PNG carousel assets.</small></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-panel documentation" aria-labelledby="spec-title">
+        <div class="section-heading">
+          <p class="eyebrow">Scaffolding Specification</p>
+          <h2 id="spec-title">Technical Blueprint for Future Expansion</h2>
+          <p>This static build includes the requested civic narrative and leaves a documented path for productization.</p>
+        </div>
+        <div class="doc-grid">
+          <article class="card"><h3>Routes</h3><p><code>/</code> anchors to five sections: Market Friction, Data Engine, Human Cost, Civic Dilemma, and Mobilize. Future nested routes can include <code>/reports/:id</code>, <code>/data/trends</code>, and <code>/limitations</code>.</p></article>
+          <article class="card"><h3>Data Model</h3><p>Suggested entities: users, properties, local_reet_rates, interviews, field_observations, council_comments, analytics_events, and reports.</p></article>
+          <article class="card"><h3>API Plan</h3><p>REST endpoints can expose <code>GET /api/rates</code>, <code>POST /api/calculations</code>, <code>GET /api/interviews</code>, and <code>POST /api/council-comments</code>. GraphQL can consolidate this with typed queries.</p></article>
+          <article class="card"><h3>Quality Bar</h3><p>Target WCAG 2.1 AA contrast, keyboard navigation, semantic HTML, per-page SEO metadata, privacy-conscious analytics, CSP headers, validation, structured logging, and automated unit, integration, E2E, and accessibility tests.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 The Bellevue REET Project. Educational civic prototype.</p>
+      <p class="sources">Sources referenced in code comments and content notes: Washington DOR REET rate tables, MRSC REET guidance, RCW 82.46, Washington Research Council policy analysis, and Redfin Bellevue market data.</p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "bellevue-reet-project",
+  "version": "1.0.0",
+  "description": "Static civic data website for the Bellevue REET housing market project.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check:a11y": "node tests/accessibility-structure.test.js"
+  },
+  "devDependencies": {}
+}
