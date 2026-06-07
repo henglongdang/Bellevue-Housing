@@ -10,16 +10,43 @@ function localRate(place) {
   return 0;
 }
 
+const stateReetBrackets = [
+  { label: "First $525,000", cap: 525000, rate: 0.011 },
+  { label: "$525,000.01 to $1,525,000", cap: 1525000, rate: 0.0128 },
+  { label: "$1,525,000.01 to $3,025,000", cap: 3025000, rate: 0.0275 },
+  { label: "Above $3,025,000", cap: Infinity, rate: 0.03 }
+];
+
+function calculateStateReet(price) {
+  let remaining = Math.max(0, Number(price) || 0);
+  let lower = 0;
+  let total = 0;
+  const rows = [];
+
+  for (const bracket of stateReetBrackets) {
+    const taxable = Math.min(remaining, bracket.cap - lower);
+    if (taxable <= 0) break;
+    const tax = taxable * bracket.rate;
+    rows.push({ ...bracket, taxable, tax });
+    total += tax;
+    remaining -= taxable;
+    lower = bracket.cap;
+  }
+
+  return { total, rows };
+}
+
 function calculate() {
   const priceInput = document.querySelector("[data-sale-price]");
   const placeInput = document.querySelector("[data-place]");
   const output = document.querySelector("[data-results]");
+  const mathOutput = document.querySelector("[data-math]");
   if (!priceInput || !placeInput || !output) return;
 
   const price = Number(priceInput.value || 0);
-  const stateRate = 0.0128;
   const local = localRate(placeInput.value);
-  const stateTax = price * stateRate;
+  const state = calculateStateReet(price);
+  const stateTax = state.total;
   const localTax = price * local;
   const totalTax = stateTax + localTax;
   const diff = price * (local - localRate("king"));
@@ -30,12 +57,32 @@ function calculate() {
     <div class="result-row"><span>Total transfer tax estimate</span><b>${money.format(totalTax)}</b></div>
     <div class="result-row"><span>Added local cost compared with no-local-REET baseline</span><b>${money.format(diff)}</b></div>
   `;
+
+  if (mathOutput) {
+    const rows = state.rows.map((row) => `
+      <tr>
+        <td>${row.label}</td>
+        <td>${money.format(row.taxable)}</td>
+        <td>${(row.rate * 100).toFixed(2)}%</td>
+        <td>${money.format(row.tax)}</td>
+      </tr>
+    `).join("");
+    mathOutput.innerHTML = `
+      <h3>State REET math</h3>
+      <p>Washington state REET is graduated. The local rate is added after the state brackets are calculated.</p>
+      <table>
+        <thead><tr><th>Bracket</th><th>Taxed amount</th><th>Rate</th><th>Tax</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
 }
 
 document.addEventListener("input", calculate);
 document.addEventListener("DOMContentLoaded", () => {
   calculate();
   renderCharts();
+  initImpactDashboard();
 });
 
 const chartData = {
@@ -145,6 +192,13 @@ const chartData = {
     labels: ["98004", "98005", "98006", "98007", "98008"],
     values: [82, 66, 58, 61, 64],
     note: "Composite development-friction index comparing Bellevue ZIP-code areas."
+  },
+  controlZipPlan: {
+    type: "bar",
+    unit: "checks",
+    labels: ["Price band", "DOM window", "Property type", "Rate period", "Local REET"],
+    values: [1, 1, 1, 1, 1],
+    note: "Minimum matching checks required before treating a no-local-REET ZIP as a valid control."
   }
 };
 
@@ -231,9 +285,9 @@ function renderScatter(el, data) {
 
 function colorFor(value, max) {
   const t = value / max;
-  const r = Math.round(237 - t * 95);
-  const g = Math.round(244 - t * 116);
-  const b = Math.round(241 - t * 135);
+  const r = Math.round(239 - t * 8);
+  const g = Math.round(246 - t * 131);
+  const b = Math.round(255 - t * 233);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -250,6 +304,49 @@ function renderHeatmap(el, data) {
   const xLabels = data.xLabels.map((label, i) => `<text x="${c.left + i * cellW + cellW / 2}" y="${c.top - 8}" text-anchor="middle">${label}</text>`).join("");
   const yLabels = data.yLabels.map((label, i) => `<text x="${c.left - 10}" y="${c.top + i * cellH + cellH / 2 + 4}" text-anchor="end">${label}</text>`).join("");
   el.innerHTML = `<svg viewBox="0 0 ${c.width} ${c.height}" role="img" aria-label="${data.note}">${xLabels}${yLabels}${cells}</svg><div class="legend"><span><i class="swatch" style="background: var(--clay)"></i>${data.note}</span></div>`;
+}
+
+const impactCopy = {
+  transaction: {
+    title: "Transaction cost friction",
+    copy: "Transfer taxes and closing costs concentrate at the moment a household is trying to move, sell, downsize, settle an estate, or rebalance investment risk.",
+    impact: 62
+  },
+  supply: {
+    title: "Supply and zoning friction",
+    copy: "Zoning constraints, parking requirements, infrastructure timing, and development feasibility shape what can be built before any buyer reaches the market.",
+    impact: 74
+  },
+  liquidity: {
+    title: "Market liquidity friction",
+    copy: "When mortgage rates rise and buyer pools narrow, small added costs become more visible because sellers and buyers have less room to absorb them.",
+    impact: 68
+  }
+};
+
+function initImpactDashboard() {
+  const dashboard = document.querySelector("[data-impact-dashboard]");
+  if (!dashboard) return;
+
+  const title = dashboard.querySelector("[data-impact-title]");
+  const copy = dashboard.querySelector("[data-impact-copy]");
+  const meter = dashboard.querySelector("[data-impact-meter]");
+  const buttons = dashboard.querySelectorAll("[data-impact]");
+
+  const setImpact = (key) => {
+    const item = impactCopy[key] || impactCopy.transaction;
+    if (title) title.textContent = item.title;
+    if (copy) copy.textContent = item.copy;
+    if (meter) meter.style.setProperty("--impact", `${item.impact}%`);
+    buttons.forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.impact === key);
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => setImpact(button.dataset.impact));
+  });
+  setImpact("transaction");
 }
 
 function renderMatrix(el, data) {
