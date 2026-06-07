@@ -1,8 +1,8 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Data Lab | 0.5% below zero</title><link rel="stylesheet" href="styles.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Data Lab | Housing Friction Index</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-  <header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a><div class="nav-links"><a href="index.html">Main page</a><a href="documents.html" target="_blank" rel="noopener">Documents</a><a href="about.html" target="_blank" rel="noopener">About</a></div></nav></header>
+  <header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark"><span>HFI</span></span><span class="brand-text"><b>Housing Friction Index</b><small>0.5% under zero</small></span></a><div class="nav-links"><a href="index.html">Main page</a><a href="abstract.html">Abstract</a><a href="documents.html">Documents</a><a href="about.html">About</a></div></nav></header>
   <main>
     <section class="page-hero"><div class="page"><p class="eyebrow">Data lab</p><h1>Turning a civic question into a data science research platform</h1><p class="lead">The next version of the work will convert qualitative findings, public records, parcel indicators, and market variables into a structured analysis pipeline.</p></div></section>
 
@@ -23,8 +23,32 @@
     <section class="band" id="correlations"><div class="section">
       <div class="section-head"><div><p class="eyebrow">Correlation structure</p><h2>How the variables relate</h2></div><p>The model uses correlation-style analysis to identify patterns that deserve deeper testing. Correlation is not causation, but it helps decide which variables belong in a larger regression model.</p></div>
       <div class="chart-wrap"><h3>Modeled correlation matrix</h3><p>Rates show the strongest association with days-on-market pressure. REET is moderate, while zoning and parking appear as structural cost channels.</p><div class="chart" data-chart="correlationMatrix"></div></div>
-      <div class="research-note" style="margin-top:18px"><h3>Confidence discussion</h3><p>The matrix is a research model built from observed themes and illustrative variables. It should be read as a transparent hypothesis map. A production version would require transaction-level data, neighborhood fixed effects, property controls, and enough observations to estimate confidence intervals.</p></div>
+      <div class="research-note" style="margin-top:18px"><h3>Confidence discussion</h3><p>The 0.39 REET-to-days-on-market value is a modeled association used to shape the next research step. It is not evidence that REET independently causes longer listings. A production version needs transaction-level data, neighborhood fixed effects, property controls, a matched control ZIP, and enough observations to estimate confidence intervals.</p></div>
     </div></section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Control group expansion</p><h2>What would prove whether REET is the driver?</h2></div><p>A valid test needs Bellevue compared with an equivalent high-income ZIP in a municipality without local REET over the exact same market window. That control has to match the market, not just the tax rate.</p></div>
+      <div class="grid two">
+        <article class="chart-wrap"><h3>Minimum control checks</h3><p>Before using a no-local-REET ZIP as a control, the study must match property mix, price band, observation window, rate period, and local tax exposure.</p><div class="chart" data-chart="controlZipPlan"></div></article>
+        <article class="card">
+          <h3>Current status</h3>
+          <p>The present exhibit does not yet contain a transaction-level control ZIP dataset. Until that dataset is built, the correlation matrix remains a hypothesis map.</p>
+          <p>The next data release should compare Bellevue listings against a selected high-income no-local-REET municipality for the same months, using days on market, price reductions, list-to-sale ratio, property type, sale price band, and mortgage-rate period as controls.</p>
+        </article>
+      </div>
+      <div class="artifact" style="margin-top:18px">
+        <table>
+          <thead><tr><th>Test element</th><th>Bellevue treatment group</th><th>No-local-REET control requirement</th></tr></thead>
+          <tbody>
+            <tr><td>Tax exposure</td><td>0.5% local REET plus graduated Washington state REET</td><td>0.0% local REET, with the same state-level calculation if the control is in Washington</td></tr>
+            <tr><td>Time frame</td><td>Same months used in the Bellevue model</td><td>Exact same listing and closing window</td></tr>
+            <tr><td>Market comparability</td><td>High-price Bellevue ZIP such as 98004</td><td>High-income ZIP with similar price band, property mix, and buyer pool</td></tr>
+            <tr><td>Outcome</td><td>Days on market, price reduction, list-to-sale ratio</td><td>The same fields measured from the same source</td></tr>
+            <tr><td>Interpretation</td><td>Association only until controls are met</td><td>Causal language only if the difference remains after controls</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <section class="section">
       <div class="section-head"><div><p class="eyebrow">Comparative geography</p><h2>ZIP-level development friction</h2></div><p>Geographic comparison helps prevent the project from treating Bellevue as one uniform market. Different ZIP-code areas can face different combinations of price, infrastructure, zoning, parking, and buyer demand.</p></div>
@@ -40,7 +64,7 @@
         <div class="timeline-item"><time>Phase 1</time><div><h3>Manual analysis</h3><p>Organize findings, source notes, calculator assumptions, and interview codes.</p></div></div>
         <div class="timeline-item"><time>Phase 2</time><div><h3>Structured database</h3><p>Convert rates, documents, observations, parcel indicators, and interview codes into tables.</p></div></div>
         <div class="timeline-item"><time>Phase 3</time><div><h3>Statistical modeling</h3><p>Test relationships between prices, rates, inventory, days on market, zoning, parking, and transaction costs.</p></div></div>
-        <div class="timeline-item"><time>Phase 4</time><div><h3>Predictive housing models</h3><p>Estimate liquidity and affordability changes under different market conditions.</p></div></div>
+        <div class="timeline-item"><time>Phase 4</time><div><h3>Predictive housing models</h3><p>Estimate liquidity and affordability changes under different conditions.</p></div></div>
         <div class="timeline-item"><time>Phase 5</time><div><h3>Policy simulation engine</h3><p>Compare revenue stability and market friction across alternative tax structures, parking reforms, and zoning scenarios.</p></div></div>
       </div>
       <div class="chart-wrap" style="margin-top:18px"><h3>Projected data pipeline growth</h3><p>The pipeline grows from manual notes into a structured simulation dataset.</p><div class="chart" data-chart="dataPipeline"></div></div>
@@ -63,11 +87,10 @@
         <article class="card"><h3>Policy impact forecasting</h3><p>Test how reform options might affect both city revenue and seller behavior.</p></article>
         <article class="card"><h3>Geographic affordability mapping</h3><p>Map payment pressure across Bellevue and nearby communities.</p></article>
       </div>
-      <div class="hero-actions"><a class="button secondary" href="about.html" target="_blank" rel="noopener">About the Author</a></div>
+      <div class="hero-actions"><a class="button secondary" href="about.html">About the Author</a></div>
     </div></section>
   </main>
-  <footer class="footer"><div class="page"><span>0.5% below zero</span><span>&copy; Henglong Dang 2026</span></div></footer>
+  <footer class="footer"><div class="page"><span>Housing Friction Index</span><span>&copy; Henglong Dang 2026</span></div></footer>
   <script src="site.js"></script>
 </body>
 </html>
-
