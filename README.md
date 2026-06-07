@@ -20,7 +20,7 @@ A static civic data website scaffold exploring how Bellevue's local real estate 
 npm start
 ```
 
-Then open <http://127.0.0.1:4173>. The server binds to `0.0.0.0` by default for preview environments and honors `PORT`/`HOST` when provided.
+Then open [<http://127.0.0.1:4173>](https://henglongdang.github.io/Bellevue-Housing/). The server binds to `0.0.0.0` by default for preview environments and honors `PORT`/`HOST` when provided.
 
 ## Test
 
