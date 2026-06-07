@@ -3,79 +3,320 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>0.5% below zero</title>
+  <title>Housing Friction Index: The Housing Friction Model and the Accumulation of Affordability Barriers</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a>
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><span>HFI</span></span>
+        <span class="brand-text"><b>Housing Friction Index</b><small>0.5% under zero</small></span>
+      </a>
       <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#discovery">Discovery</a>
+        <a href="#investigation">Investigation</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#findings">Findings</a>
         <a href="#policy">Policy</a>
-        <a href="#calculator">Calculator</a>
-        <a href="#research">Methodology</a>
-        <a href="#recommendations">Recommendations</a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">Bellevue housing research exhibit</p>
-        <h1>0.5% below zero.</h1>
-        <p class="lead">A seller-led investigation into how Bellevue's 0.5% local REET, zoning constraints, street design, parking rules, and mortgage-rate pressure combine at the exact moment a home changes hands.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#calculator">Estimate the cost</a>
-          <a class="button secondary" href="investigation.html" target="_blank" rel="noopener">Open investigation page</a>
+      <div class="exhibit-hero" id="problem">
+        <div class="hero-copy">
+          <div class="keyword-strip" aria-label="Project keywords">
+            <span>Hidden costs.</span>
+            <span>Layered barriers.</span>
+            <span>System interactions.</span>
+            <span>Research-driven discovery.</span>
+          </div>
+          <p class="eyebrow">Bellevue housing research exhibit</p>
+          <h1 class="project-title">Housing Friction Index</h1>
+          <p class="subtitle">The Housing Friction Model and the Accumulation of Affordability Barriers</p>
+          <p class="lead">Housing affordability is not determined by a single price, policy, or tax. It emerges from the accumulation of hidden frictions that shape how people buy, sell, move, and build.</p>
+          <p class="lead">A housing-friction study testing whether small transaction costs become meaningful when they stack with rates, prices, zoning, parking, and timing risk.</p>
+          <p class="hook">0.5% under zero: Bellevue's REET as a motivating case study.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="abstract.html">Read the abstract</a>
+            <a class="button dark" href="#analysis">Explore the model</a>
+            <a class="button dark" href="#calculator">Estimate transaction cost</a>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Layered friction visual">
+          <div class="friction-path" aria-hidden="true">
+            <svg viewBox="0 0 420 150">
+              <path class="path-line" d="M10,78 C80,20 142,124 206,74 S320,18 410,76"></path>
+              <rect class="path-block" x="195" y="26" width="16" height="96" rx="3"></rect>
+            </svg>
+          </div>
+          <div class="friction-layers">
+            <div class="friction-layer" style="--offset: 0"><b>Taxes</b><span>transfer cost at closing</span></div>
+            <div class="friction-layer" style="--offset: 18px"><b>Zoning</b><span>supply constraints</span></div>
+            <div class="friction-layer" style="--offset: 36px"><b>Rates</b><span>monthly payment pressure</span></div>
+            <div class="friction-layer" style="--offset: 54px"><b>Permits</b><span>delay and development risk</span></div>
+          </div>
+        </aside>
+        <div class="hero-metrics" aria-label="Research impact metrics">
+          <div class="metric-tile"><b>30+</b><span>Hours of policy review</span></div>
+          <div class="metric-tile"><b>7</b><span>Real estate professionals interviewed</span></div>
+          <div class="metric-tile"><b>5</b><span>Housing friction categories</span></div>
+          <div class="metric-tile"><b>1</b><span>Original framework</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="policy">
+    <section class="section" id="summary">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Policy problem</p>
-          <h2>Transfer taxes are small in rate form and large in transaction form</h2>
+          <p class="eyebrow">Executive summary</p>
+          <h2>Housing affordability is the cumulative outcome of interacting market frictions</h2>
         </div>
-        <p>Bellevue's local Real Estate Excise Tax is measured as a percentage, but sellers experience it as a dollar amount at closing. This exhibit keeps the original policy explainer in place and expands it into a broader empirical question: when housing is already expensive, how much friction can the local system add before households change behavior?</p>
+        <p>This project tests one main claim: Bellevue's 0.5% local REET is unlikely to explain housing affordability by itself, but it can add measurable friction when a household is already facing high prices, mortgage-rate pressure, concessions, repair risk, and limited housing choices.</p>
       </div>
-      <div class="grid">
-        <article class="card">
-          <strong>The tax point</strong>
-          <h3>REET is paid at transfer</h3>
-          <p>The cost appears during closing. That makes it different from a broad annual tax because it concentrates the burden on households and owners who are moving, downsizing, settling estates, relocating for work, or selling investment property.</p>
+      <blockquote class="pull-quote">Taxes, regulations, permitting processes, financing conditions, and development constraints collectively shape affordability and housing mobility.</blockquote>
+      <div class="grid" style="margin-top:18px">
+        <article class="card friction">
+          <strong>Direct cost</strong>
+          <h3>The rate becomes cash at closing</h3>
+          <p>At Bellevue price levels, 0.5% is not abstract. On a $1.4 million sale, the local amount is $7,000 before commissions, escrow, title, repairs, concessions, or moving costs are counted.</p>
         </article>
-        <article class="card">
-          <strong>The market concern</strong>
-          <h3>Sellers protect net proceeds</h3>
-          <p>When a seller sees a higher closing-cost estimate, the natural response is to preserve the net number. In a soft market, that can lead to delayed listings, higher initial asking prices, or resistance to buyer concessions.</p>
+        <article class="card friction">
+          <strong>Behavioral test</strong>
+          <h3>Net-proceeds pressure can change choices</h3>
+          <p>The research asks whether sellers delay listing, resist concessions, or set prices differently when added local costs appear beside a weaker buyer pool and higher monthly-payment pressure.</p>
         </article>
-        <article class="card">
-          <strong>The civic tradeoff</strong>
-          <h3>Bellevue needs capital funding</h3>
-          <p>The question is not whether infrastructure matters. It does. The question is whether the revenue tool should become more sensitive to market conditions, housing supply, and affordability pressure.</p>
+        <article class="card finding">
+          <strong>Policy frame</strong>
+          <h3>Revenue purpose and market effect both matter</h3>
+          <p>Bellevue needs capital funding. The policy question is whether the revenue design can be evaluated against mobility, liquidity, affordability, and market-cycle conditions without treating repeal as the only option.</p>
         </article>
       </div>
       <div class="stat-grid" style="margin-top:18px">
         <div class="stat"><b>$7,000</b><span>Local REET on a $1.4 million Bellevue sale at 0.5%.</span></div>
         <div class="stat"><b>11</b><span>Policy and market indicators tracked across the exhibit.</span></div>
-        <div class="stat"><b>0.39</b><span>Modeled correlation between local REET exposure and days-on-market pressure.</span></div>
-        <div class="stat"><b>5</b><span>Comparison geographies used for ZIP-level development-friction scoring.</span></div>
+        <div class="stat"><b>0.39</b><span>Modeled association to test, not a causal finding.</span></div>
+        <div class="stat"><b>1</b><span>Primary hypothesis, with secondary tests kept subordinate.</span></div>
       </div>
     </section>
 
-    <section class="band">
+    <section class="band" id="discovery">
       <div class="section">
-        <div class="split" id="calculator">
+        <div class="section-head">
           <div>
-            <p class="eyebrow">Seller cost model</p>
+            <p class="eyebrow">Discovery</p>
+            <h2>From a closing estimate to a system map</h2>
+          </div>
+          <p>The question began during preparation for a Bellevue home sale, so the project states that stake openly. The analysis therefore separates transaction arithmetic, source documentation, field observations, interview themes, and future control-group testing before making policy recommendations.</p>
+        </div>
+        <div class="split">
+          <div class="story-block">
+            <details open>
+              <summary>Practical observation</summary>
+              <p>The research originated from a practical observation during the sale of a residential property in Bellevue, Washington. While reviewing closing documents, a municipal Real Estate Excise Tax (REET) of 0.5% emerged as a notable transaction cost.</p>
+            </details>
+            <details>
+              <summary>Broader question</summary>
+              <p>Although relatively small when viewed independently, the tax raised a broader question: at what point do accumulated housing-market frictions begin to influence homeowner behavior, transaction decisions, and overall housing affordability?</p>
+            </details>
+            <details>
+              <summary>Research direction</summary>
+              <p>To address this question, the study expands beyond the Bellevue REET itself and develops a broader analytical framework termed the Housing Friction Model.</p>
+            </details>
+          </div>
+          <aside class="chart-wrap">
+            <h3>Affordability flow</h3>
+            <p>Movement through the housing market slows as financing, regulation, transaction costs, and closing requirements accumulate.</p>
+            <div class="flow-visual">
+              <div class="flow-step"><strong>Buyer</strong><span>Payment threshold</span></div>
+              <div class="flow-step"><strong>Financing</strong><span>Mortgage-rate pressure</span></div>
+              <div class="flow-step"><strong>Regulation</strong><span>Zoning and permits</span></div>
+              <div class="flow-step"><strong>Costs</strong><span>REET and closing cash</span></div>
+              <div class="flow-step"><strong>Closing</strong><span>Mobility decision</span></div>
+            </div>
+          </aside>
+        </div>
+        <div class="research-note" style="margin-top:18px">
+          <h3>Origin and bias control</h3>
+          <p>The question began during preparation for a Bellevue home sale, so the project states that stake openly. The analysis therefore separates transaction arithmetic, source documentation, field observations, interview themes, and future control-group testing before making policy recommendations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="investigation">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Investigation</p>
+          <h2>A research sequence built from source authority to modeling</h2>
+        </div>
+        <p>The research path now moves from source authority to inquiry, then from human field evidence to data modeling. Policy documents and investigation belong together because the legal source trail frames the research question; interviews and open-house fieldwork belong together because both test how people experience the policy; Data Lab comes last because it converts the evidence into a modeling framework.</p>
+      </div>
+      <div class="narrative-rail">
+        <div class="narrative-step"><strong>Problem</strong><div><h3>Housing friction accumulates</h3><p>Housing affordability should be evaluated through cumulative friction, not a single isolated policy.</p></div></div>
+        <div class="narrative-step"><strong>Discovery</strong><div><h3>0.5% becomes visible at Bellevue prices</h3><p>The Bellevue REET serves as a case study through which broader housing-market frictions can be examined.</p></div></div>
+        <div class="narrative-step"><strong>Evidence</strong><div><h3>Documents, interviews, fieldwork, and charts</h3><p>The project combines direct seller experience, field interviews, open-house observation, online research, policy review, and market modeling. The point is to make the conclusion traceable and open to critique.</p></div></div>
+        <div class="narrative-step"><strong>Analysis</strong><div><h3>The Housing Friction Model</h3><p>The analysis treats REET as one measurable component inside a larger housing-friction index.</p></div></div>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <article class="card">
+          <strong>01</strong>
+          <h3>Abstract</h3>
+          <p>Condensed thesis, findings, limits, and policy implication for quick review.</p>
+          <a class="button secondary" href="abstract.html">Open page</a>
+        </article>
+        <article class="card">
+          <strong>02</strong>
+          <h3>Policy Documents</h3>
+          <p>Washington, Bellevue, housing-policy, zoning, parking, and capital-funding sources.</p>
+          <a class="button secondary" href="documents.html">Open page</a>
+        </article>
+        <article class="card">
+          <strong>03</strong>
+          <h3>The Investigation</h3>
+          <p>Origin story, research questions, methodology, statistical design, and timeline.</p>
+          <a class="button secondary" href="investigation.html">Open page</a>
+        </article>
+        <article class="card">
+          <strong>04</strong>
+          <h3>Participation</h3>
+          <p>Interview program, protected agent profiles, coding matrix, questionnaire, and findings.</p>
+          <a class="button secondary" href="participation.html">Open page</a>
+        </article>
+        <article class="card">
+          <strong>05</strong>
+          <h3>Open House Fieldwork</h3>
+          <p>Visitor observations, buyer concerns, topic frequency, and walkability measurements.</p>
+          <a class="button secondary" href="fieldwork.html">Open page</a>
+        </article>
+        <article class="card">
+          <strong>06</strong>
+          <h3>Data Lab</h3>
+          <p>Dataset inventory, correlation matrix, scenario model, and future statistical pipeline.</p>
+          <a class="button secondary" href="data-lab.html">Open page</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="evidence">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Evidence</p>
+            <h2>Research activity summary</h2>
+          </div>
+          <p>The project combines direct seller experience, field interviews, open-house observation, online research, policy review, and market modeling. The point is to make the conclusion traceable and open to critique.</p>
+        </div>
+        <div class="grid">
+          <article class="card metric"><span class="number">7</span><h3>Real estate professionals interviewed</h3><p>Eastside agents and brokers described seller cost sensitivity, buyer affordability pressure, and current market caution.</p></article>
+          <article class="card metric"><span class="number">101</span><h3>Open-house topic mentions coded</h3><p>Visitor conversations were coded for financing concerns, neighborhood comparisons, tax awareness, and price sensitivity.</p></article>
+          <article class="card metric"><span class="number">30+</span><h3>Hours of policy review</h3><p>State statutes, Bellevue budget materials, zoning concepts, parking assumptions, and housing strategy records were reviewed.</p></article>
+        </div>
+        <div class="meta-panel" style="margin-top:18px">
+          <div><strong>Research exhibit</strong><span>Bellevue housing research exhibit</span></div>
+          <div><strong>Case study</strong><span>Bellevue local REET</span></div>
+          <div><strong>Evidence types</strong><span>Policy analysis, municipal financial data, housing-market indicators, public records, stakeholder interviews, open-house observations, and comparative research from peer municipalities.</span></div>
+          <div><strong>Model type</strong><span>Housing Friction Model</span></div>
+        </div>
+        <div class="grid two" style="margin-top:18px">
+          <article class="chart-wrap">
+            <h3>Local REET burden by sale price</h3>
+            <p>The dollar cost rises linearly with sale price, which matters in a city where many ordinary transactions are seven figures.</p>
+            <div class="chart" data-chart="reetBurden"></div>
+          </article>
+          <article class="chart-wrap">
+            <h3>Affordability pressure stack</h3>
+            <p>The tax is not isolated. It stacks with rate shock, price level, parking cost, and regulatory delay.</p>
+            <div class="chart" data-chart="affordabilityStack"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="analysis">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Analysis</p>
+          <h2>The Housing Friction Model as the centerpiece</h2>
+        </div>
+        <p>This framework conceptualizes housing affordability as the product of interacting constraints rather than a single market variable. Under this model, transaction taxes represent only one component within a larger ecosystem that includes zoning restrictions, parking requirements, permitting processes, mortgage rates, land-use regulations, development costs, and behavioral responses by buyers and sellers.</p>
+      </div>
+      <div class="framework-diagram" aria-label="Housing Friction Framework diagram">
+        <svg class="framework-lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="180" y1="90" x2="500" y2="260"></line>
+          <line x1="820" y1="90" x2="500" y2="260"></line>
+          <line x1="180" y1="430" x2="500" y2="260"></line>
+          <line x1="820" y1="430" x2="500" y2="260"></line>
+          <line x1="500" y1="70" x2="500" y2="260"></line>
+          <line x1="500" y1="450" x2="500" y2="260"></line>
+        </svg>
+        <div class="framework-center"><h3>Housing Affordability</h3><p>Cumulative outcome of interacting market frictions</p></div>
+        <div class="framework-node node-tax"><b>Taxes</b><span>REET and closing-cost exposure</span></div>
+        <div class="framework-node node-zoning"><b>Zoning</b><span>Land-use and density constraints</span></div>
+        <div class="framework-node node-permit"><b>Permitting</b><span>Delay and procedural requirements</span></div>
+        <div class="framework-node node-rates"><b>Mortgage Rates</b><span>Monthly payment pressure</span></div>
+        <div class="framework-node node-parking"><b>Parking</b><span>Structured cost and minimums</span></div>
+        <div class="framework-node node-supply"><b>Supply</b><span>Regional growth and land scarcity</span></div>
+      </div>
+      <div class="grid two" style="margin-top:18px">
+        <article class="card">
+          <h3>Friction Score formula</h3>
+          <p>Friction Score = 25% x REET burden percentile + 20% x zoning constraint score + 15% x parking cost score + 15% x permit delay score + 15% x mortgage-rate exposure + 10% x street-width walkability penalty.</p>
+          <p>Each component is normalized to a 0-100 scale. Weighting is intentionally conservative: REET receives the largest single weight because it is the origin of the project, but the model prevents one variable from dominating the full interpretation.</p>
+        </article>
+        <article class="card">
+          <h3>Friction stack diagram</h3>
+          <div class="stack-visual">
+            <div class="stack-row"><strong>Housing Cost</strong><div class="stack-bar" style="--w: 86%"></div><span>base</span></div>
+            <div class="stack-row"><strong>Mortgage Rate</strong><div class="stack-bar" style="--w: 74%"></div><span>74</span></div>
+            <div class="stack-row"><strong>Zoning Constraints</strong><div class="stack-bar" style="--w: 61%"></div><span>61</span></div>
+            <div class="stack-row"><strong>Parking Requirements</strong><div class="stack-bar" style="--w: 42%"></div><span>42</span></div>
+            <div class="stack-row"><strong>Transaction Taxes</strong><div class="stack-bar" style="--w: 31%"></div><span>31</span></div>
+            <div class="stack-row"><strong>Permit Delays</strong><div class="stack-bar" style="--w: 21%"></div><span>21</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Interactive dashboard</p>
+            <h2>Dynamic policy impact visualization</h2>
+          </div>
+          <p>The dashboard reframes the analysis from a local tax question into a system-interaction question: which friction channel is active, and what kind of policy response would reduce resistance without erasing public objectives?</p>
+        </div>
+        <div class="policy-dashboard" data-impact-dashboard>
+          <div class="impact-controls" aria-label="Policy impact controls">
+            <button type="button" data-impact="transaction">Transaction cost friction</button>
+            <button type="button" data-impact="supply">Supply and zoning friction</button>
+            <button type="button" data-impact="liquidity">Market liquidity friction</button>
+          </div>
+          <div class="impact-output">
+            <p class="eyebrow">Selected channel</p>
+            <h3 data-impact-title>Transaction cost friction</h3>
+            <div class="impact-meter" aria-hidden="true"><span data-impact-meter></span></div>
+            <p data-impact-copy>Transfer taxes and closing costs concentrate at the moment a household is trying to move, sell, downsize, settle an estate, or rebalance investment risk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="calculator">
+      <div class="section">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Transaction cost flow</p>
             <h2>Small percentages become visible at Bellevue prices</h2>
-            <p class="lead">Half of one percent can look modest until it is applied to a seven-figure transaction. The calculator keeps the original site function in place and adds a research interpretation: transfer costs matter most when sellers are already negotiating repairs, concessions, rate buydowns, and timing risk.</p>
+            <p class="lead">The calculator shows the same sale price under Bellevue, Seattle, and no-local-REET scenarios. It also exposes the state bracket math so the result is auditable instead of a black box.</p>
             <div class="notice">
               <strong>Working assumption</strong>
-              <p>This tool is educational. It uses a simplified state estimate and local-rate comparison so visitors can see how municipal boundaries change transaction costs. A closing agent or tax professional should confirm any live transaction.</p>
+              <p>This tool is educational. It applies Washington's graduated state REET brackets for residential sale prices and then adds the selected local rate. A closing agent or tax professional should confirm any live transaction.</p>
             </div>
           </div>
           <aside class="calculator" aria-label="REET calculator">
@@ -92,122 +333,47 @@
               </select>
             </div>
             <div data-results aria-live="polite"></div>
+            <div class="formula-box" data-math></div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="findings">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Why I started looking</p>
-          <h2>The issue began with a real sale decision</h2>
+          <p class="eyebrow">Findings</p>
+          <h2>What the analysis suggests</h2>
         </div>
-        <p>I was preparing to sell residential property in Bellevue and noticed that local transaction costs were not the same on both sides of nearby municipal boundaries. What first looked like a small line item became a broader research question about market behavior during a downturn.</p>
-      </div>
-      <div class="grid two">
-        <article class="card">
-          <h3>Personal stake</h3>
-          <p>I approached the issue as a seller affected by closing costs, not as a campaign staffer or paid consultant. That perspective shaped the research: start with the transaction math, then test the assumptions against agents, buyers, policy documents, field observations, and modeled data.</p>
-        </article>
-        <article class="card">
-          <h3>Research direction</h3>
-          <p>The investigation asked whether sellers try to recover transaction costs through price, whether buyers notice the combined affordability pressure, and whether Bellevue can keep important capital revenue while reducing friction when the housing market slows.</p>
-        </article>
-      </div>
-      <div class="research-note" style="margin-top:18px">
-        <h3>Quantitative frame</h3>
-        <p>The analysis treats REET as one measurable component inside a larger housing-friction index. The index combines local transfer cost, estimated parking-cost burden, zoning constraint intensity, street-width walkability effects, permit-delay risk, and mortgage-rate exposure. Scores are normalized to a 0-100 scale so indicators with different units can be compared without claiming false precision.</p>
-      </div>
-    </section>
-
-    <section class="band" id="research">
-      <div class="section">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Methodology</p>
-            <h2>Research exhibit pages</h2>
-          </div>
-          <p>The research path now moves from source authority to inquiry, then from human field evidence to data modeling. Policy documents and investigation belong together because the legal source trail frames the research question; interviews and open-house fieldwork belong together because both test how people experience the policy; Data Lab comes last because it converts the evidence into a modeling framework.</p>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <strong>01</strong>
-            <h3>Policy Documents</h3>
-            <p>Washington, Bellevue, housing-policy, zoning, parking, and capital-funding sources.</p>
-            <a class="button secondary" href="documents.html" target="_blank" rel="noopener">Open page</a>
-          </article>
-          <article class="card">
-            <strong>02</strong>
-            <h3>The Investigation</h3>
-            <p>Origin story, research questions, methodology, statistical design, and timeline.</p>
-            <a class="button secondary" href="investigation.html" target="_blank" rel="noopener">Open page</a>
-          </article>
-          <article class="card">
-            <strong>03</strong>
-            <h3>Participation</h3>
-            <p>Interview program, protected agent profiles, coding matrix, questionnaire, and findings.</p>
-            <a class="button secondary" href="participation.html" target="_blank" rel="noopener">Open page</a>
-          </article>
-          <article class="card">
-            <strong>04</strong>
-            <h3>Open House Fieldwork</h3>
-            <p>Visitor observations, buyer concerns, topic frequency, and walkability measurements.</p>
-            <a class="button secondary" href="fieldwork.html" target="_blank" rel="noopener">Open page</a>
-          </article>
-          <article class="card">
-            <strong>05</strong>
-            <h3>Data Lab</h3>
-            <p>Dataset inventory, correlation matrix, scenario model, and future statistical pipeline.</p>
-            <a class="button secondary" href="data-lab.html" target="_blank" rel="noopener">Open page</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Researcher</p>
-          <h2>About Henglong Dang</h2>
-        </div>
-        <p>The author profile is separated from the research sequence so the methodology remains focused on evidence, while the researcher page explains the broader systems-thinking and human-centered design practice behind the work.</p>
-      </div>
-      <a class="button secondary" href="about.html" target="_blank" rel="noopener">Open author page</a>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Research activity summary</p>
-          <h2>Evidence gathered before reaching a conclusion</h2>
-        </div>
-        <p>The project combines direct seller experience, field interviews, open-house observation, online research, policy review, and market modeling. The point is to make the conclusion traceable and open to critique.</p>
+        <p>The analysis finds that the Bellevue REET is unlikely to be a primary driver of housing unaffordability when considered in isolation. Larger structural forces, including regional housing supply constraints, population growth, mortgage interest rates, and land scarcity, exert substantially greater influence on overall housing costs.</p>
       </div>
       <div class="grid">
-        <article class="card metric"><span class="number">7</span><h3>Real estate professionals interviewed</h3><p>Eastside agents and brokers described seller cost sensitivity, buyer affordability pressure, and current market caution.</p></article>
-        <article class="card metric"><span class="number">101</span><h3>Open-house topic mentions coded</h3><p>Visitor conversations were coded for financing concerns, neighborhood comparisons, tax awareness, and price sensitivity.</p></article>
-        <article class="card metric"><span class="number">30+</span><h3>Hours of policy review</h3><p>State statutes, Bellevue budget materials, zoning concepts, parking assumptions, and housing strategy records were reviewed.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>REET is not the whole story</h3><p>However, the study suggests that transaction-related costs remain relevant because housing markets are shaped by the accumulation of numerous frictions rather than a single dominant factor.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>Small costs interact with larger forces</h3><p>In this context, even relatively modest transaction costs may contribute to broader patterns of reduced mobility and increased barriers to market participation when combined with other existing constraints.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>Policy is evaluated too narrowly</h3><p>The research further demonstrates that housing policy is often evaluated through isolated interventions despite operating within highly interconnected systems.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>Burden is cumulative</h3><p>Policies intended to generate municipal revenue, regulate development, improve infrastructure, or preserve neighborhood character frequently interact in ways that create unintended cumulative burdens.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>Affordability outcomes are systemic</h3><p>As a result, affordability outcomes may emerge not from any single regulation, tax, or market condition, but from the collective weight of multiple overlapping constraints.</p></article>
+        <article class="card finding"><strong>Finding</strong><h3>Control-group testing is the next standard</h3><p>The next validation step is a matched high-income ZIP in a municipality without local REET over the same time frame. Without that control, the current result remains exploratory.</p></article>
       </div>
       <div class="grid two" style="margin-top:18px">
         <article class="chart-wrap">
-          <h3>Local REET burden by sale price</h3>
-          <p>The dollar cost rises linearly with sale price, which matters in a city where many ordinary transactions are seven figures.</p>
-          <div class="chart" data-chart="reetBurden"></div>
+          <h3>Modeled correlation matrix</h3>
+          <p>Rates show the strongest association with days-on-market pressure. REET is moderate, while zoning and parking appear as structural cost channels.</p>
+          <div class="chart" data-chart="correlationMatrix"></div>
         </article>
         <article class="chart-wrap">
-          <h3>Affordability pressure stack</h3>
-          <p>The tax is not isolated. It stacks with rate shock, price level, parking cost, and regulatory delay.</p>
-          <div class="chart" data-chart="affordabilityStack"></div>
+          <h3>Regulatory friction and monthly cost</h3>
+          <p>The scatter plot frames a regression question: does higher policy friction align with higher modeled monthly cost after controls are introduced?</p>
+          <div class="chart" data-chart="affordabilityScatter"></div>
         </article>
       </div>
     </section>
 
-    <section class="band" id="recommendations">
+    <section class="band" id="policy">
       <div class="section">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Civic recommendations</p>
+            <p class="eyebrow">Policy implications</p>
             <h2>Keep infrastructure funding, reduce housing friction</h2>
           </div>
           <p>The research points toward practical policy review instead of simple repeal. Bellevue can preserve capital revenue while asking whether the tax design should respond to affordability, liquidity, and market-cycle conditions.</p>
@@ -219,11 +385,40 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="conclusion">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Conclusion</p>
+          <h2>Evaluate the stack, not just the line item</h2>
+        </div>
+        <p>The central thesis of this project is that housing affordability should be understood as a systems problem rather than a single-policy problem. Effective housing policy requires evaluating the cumulative impact of housing-market frictions and recognizing how small costs can interact with larger structural forces.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Researcher</h3>
+          <p>The author profile is separated from the research sequence so the methodology remains focused on evidence, while the researcher page explains the broader systems-thinking and human-centered design practice behind the work.</p>
+          <a class="button secondary" href="about.html">Open author page</a>
+        </article>
+        <article class="card">
+          <h3>Downloadable report section</h3>
+          <p>Use the public artifacts below to review the abstract, source trail, and interview questionnaire that supports the exhibit.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="abstract.html">Read abstract</a>
+            <a class="button secondary" href="documents.html">References database</a>
+          </div>
+        </article>
+      </div>
+      <div class="research-note" style="margin-top:18px">
+        <h3>Final argument</h3>
+        <p>Ultimately, this study argues that policymakers should move beyond evaluating individual housing policies in isolation and instead adopt a friction-based framework that measures the combined effects of taxes, regulations, procedural requirements, and market barriers. Such an approach may provide a more accurate understanding of affordability challenges and support the development of policies that preserve public objectives while minimizing unintended obstacles to housing access and mobility.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="page">
-      <span>0.5% below zero</span>
+      <span>Housing Friction Index</span>
       <span>&copy; Henglong Dang 2026</span>
     </div>
   </footer>
