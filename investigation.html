@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Investigation | 0.5% below zero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a>
+      <div class="nav-links"><a href="index.html">Main page</a><a href="participation.html" target="_blank" rel="noopener">Participation</a><a href="data-lab.html" target="_blank" rel="noopener">Data Lab</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="page">
+        <p class="eyebrow">The investigation</p>
+        <h1>From one seller's closing estimate to a multi-factor housing-friction model</h1>
+        <p class="lead">The investigation began with Bellevue's local REET, then expanded into a broader study of transaction costs, zoning constraints, parking assumptions, street design, and market liquidity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <h2>How the question emerged</h2>
+          <p>While preparing to sell residential property in Bellevue, I reviewed the cost side of the transaction with more care than I had before. Agent commissions, title charges, escrow fees, repairs, concessions, and taxes all affected the net proceeds. One local line item stood out because it changed by jurisdiction.</p>
+          <p>A seller in Bellevue faces a local Real Estate Excise Tax burden of 0.5% of the selling price. At first, half of one percent can sound too small to matter. Applied to a $1.4 million transaction, however, the local amount becomes $7,000 before any other closing-cost pressure is considered.</p>
+          <p>The research question changed when I put that number inside a real sale environment. A seller does not see REET in isolation. The same net sheet can include staging, repairs, buyer credits, rate-buydown requests, inspection concessions, and uncertainty about how long the home will sit. A small policy cost can become behaviorally important when it appears beside several other costs at once.</p>
+          <p>The investigation therefore treats Bellevue's REET as an entry point into a larger boundary-cost problem. Municipal lines, zoning rules, parking minimums, street widths, and infrastructure funding rules all shape the economic terms under which homes are built, listed, purchased, and sold.</p>
+        </div>
+        <aside class="card">
+          <strong>Research thesis</strong>
+          <h3>Housing friction accumulates</h3>
+          <p>The project does not claim that REET alone controls affordability. It tests whether multiple local policy costs compound during periods when buyers are payment-sensitive and sellers are protective of net proceeds.</p>
+          <div class="pill-row"><span class="pill">Transaction cost</span><span class="pill">Zoning supply</span><span class="pill">Parking burden</span><span class="pill">Street design</span><span class="pill">Market liquidity</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section">
+        <div class="section-head"><div><p class="eyebrow">Research design</p><h2>Five questions guided the work</h2></div><p>Each question links a policy input to a market behavior that can be measured, coded, or compared.</p></div>
+        <div class="grid">
+          <article class="card"><strong>Question 1</strong><h3>Does Bellevue's local REET create additional transaction friction?</h3><p>Method: calculate local tax burden across sale-price bands and compare it with a no-local-REET scenario.</p></article>
+          <article class="card"><strong>Question 2</strong><h3>Do sellers incorporate REET costs into listing prices?</h3><p>Method: code agent interviews for net-proceeds sensitivity, concession resistance, and price-setting language.</p></article>
+          <article class="card"><strong>Question 3</strong><h3>Does this behavior affect housing affordability?</h3><p>Method: compare buyer-topic mentions, modeled payment pressure, and estimated cost pass-through.</p></article>
+          <article class="card"><strong>Question 4</strong><h3>How important is REET revenue for Bellevue infrastructure?</h3><p>Method: review capital-facility and budget materials to separate revenue purpose from market effect.</p></article>
+          <article class="card"><strong>Question 5</strong><h3>Could alternative structures achieve similar revenue goals?</h3><p>Method: build scenario assumptions for thresholds, exemptions, credits, and broader funding mixes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Quantitative model</p><h2>The housing-friction index</h2></div><p>The index is a structured way to compare unlike policy forces. It does not replace direct legal or economic analysis; it makes the assumptions visible enough to debate.</p></div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Formula</h3>
+          <p>Friction Score = 25% x REET burden percentile + 20% x zoning constraint score + 15% x parking cost score + 15% x permit delay score + 15% x mortgage-rate exposure + 10% x street-width walkability penalty.</p>
+          <p>Each component is normalized to a 0-100 scale. Weighting is intentionally conservative: REET receives the largest single weight because it is the origin of the project, but the model prevents one variable from dominating the full interpretation.</p>
+        </article>
+        <article class="card">
+          <h3>Interpretation</h3>
+          <p>Scores above 70 indicate a policy environment where several cost channels are active at once. Scores from 40 to 70 indicate mixed friction. Scores below 40 indicate either lower transaction exposure or fewer local regulatory burdens. The model is best read comparatively, not as a precise forecast.</p>
+        </article>
+      </div>
+      <div class="chart-wrap" style="margin-top:18px">
+        <h3>Modeled liquidity trend</h3>
+        <p>Days on market are used as a liquidity proxy. As liquidity weakens, the behavioral importance of added closing costs rises.</p>
+        <div class="chart" data-chart="liquidityTrend"></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section">
+        <div class="section-head"><div><p class="eyebrow">Statistical approach</p><h2>What the analysis can and cannot prove</h2></div><p>The exhibit uses correlation-style and regression-style interpretations, but it avoids claiming causation from a small observational project.</p></div>
+        <div class="grid">
+          <article class="card"><h3>Correlation analysis</h3><p>The modeled correlation between REET exposure and days-on-market pressure is 0.39. That suggests moderate association in the research model, not proof that REET independently causes longer listings.</p></article>
+          <article class="card"><h3>Comparative benchmarks</h3><p>Sale-price bands, ZIP-code friction scores, and neighborhood indicators are benchmarked against each other so the project can identify where cost pressure is concentrated.</p></article>
+          <article class="card"><h3>Trend analysis</h3><p>The January-June timeline is treated as a market-condition sequence. Rising days-on-market assumptions are paired with interview coding to test whether seller cost sensitivity becomes more visible over time.</p></article>
+          <article class="card"><h3>Distribution analysis</h3><p>Parking-cost and visitor-topic distributions are used to show spread, not only averages. This matters because a few high-cost projects can shift feasibility even when the median looks manageable.</p></article>
+          <article class="card"><h3>Regression-style interpretation</h3><p>The project reads slope direction and residual risk qualitatively. A larger sample would be needed for formal coefficient estimates, standard errors, and causal identification.</p></article>
+          <article class="card"><h3>Confidence and limits</h3><p>Confidence is strongest for transaction arithmetic and source documentation. It is moderate for interview patterns and lower for predictive claims about future market outcomes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Methodology</p><h2>Five research phases</h2></div><p>The method was deliberately mixed: documents for legal structure, interviews for market behavior, fieldwork for buyer language, and data review for economic context.</p></div>
+      <div class="timeline">
+        <div class="timeline-item"><time>Phase 1</time><div><h3>Document review</h3><p>Reviewed state REET statutes, Bellevue REET materials, capital improvement restrictions, budget documents, zoning concepts, parking-cost assumptions, and housing strategy records.</p></div></div>
+        <div class="timeline-item"><time>Phase 2</time><div><h3>Field interviews</h3><p>Interviewed seven Eastside real estate professionals while protecting names and client details. Responses were coded by topic, agreement level, and relation to transaction behavior.</p></div></div>
+        <div class="timeline-item"><time>Phase 3</time><div><h3>Open house observation</h3><p>Hosted and observed open-house interactions, logging recurring buyer concerns, street/neighborhood comments, and monthly-payment language.</p></div></div>
+        <div class="timeline-item"><time>Phase 4</time><div><h3>Policy analysis</h3><p>Compared revenue purpose with market pressure, housing-production incentives, walkability indicators, liquidity concerns, and affordability effects.</p></div></div>
+        <div class="timeline-item"><time>Phase 5</time><div><h3>Synthesis</h3><p>Converted findings into public-facing recommendations and a data-science roadmap that can be extended with larger public datasets.</p></div></div>
+      </div>
+    </section>
+
+    <section class="band"><div class="section"><div class="section-head"><div><p class="eyebrow">Timeline</p><h2>January to June 2026</h2></div><p>The work moved from a personal sale question to a documented civic investigation.</p></div><div class="timeline"><div class="timeline-item"><time>Jan 2026</time><div>Initial home sale preparation and closing-cost review.</div></div><div class="timeline-item"><time>Feb 2026</time><div>Discovery of Bellevue's local REET differential and first transaction-cost calculations.</div></div><div class="timeline-item"><time>Apr 2026</time><div>First agent interview, early document review, and initial variable list for the housing-friction index.</div></div><div class="timeline-item"><time>Apr-May 2026</time><div>Open-house observations, visitor concern coding, and street/neighborhood comparison notes.</div></div><div class="timeline-item"><time>May 2026</time><div>Interview series completed with seven real estate professionals and coded into agreement categories.</div></div><div class="timeline-item"><time>Jun 2026</time><div>Policy synthesis, visual exhibit, and civic recommendations drafted.</div></div></div></div></section>
+    <section class="section"><div class="page"><a class="button primary" href="participation.html" target="_blank" rel="noopener">Next: Participation</a></div></section>
+  </main>
+  <footer class="footer"><div class="page"><span>0.5% below zero</span><span>&copy; Henglong Dang 2026</span></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>
+

@@ -1,3 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Blurred open house event placeholder">
-  <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter><rect width="640" height="420" fill="#dfe7ea"/><g filter="url(#blur)"><rect x="70" y="70" width="500" height="260" rx="30" fill="#f4b942"/><circle cx="210" cy="210" r="70" fill="#0f5c88"/><circle cx="380" cy="190" r="80" fill="#e6642f"/><rect x="260" y="270" width="260" height="50" fill="#071827"/></g><text x="40" y="385" font-family="Arial" font-size="24" fill="#13212e">Open house field artifact placeholder</text>
-</svg>

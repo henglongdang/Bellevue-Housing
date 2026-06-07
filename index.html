@@ -1,399 +1,232 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="A documented civic investigation into Bellevue housing transaction costs, field research, REET policy, and data-driven affordability analysis." />
-<meta property="og:title" content="The Bellevue REET Project" />
-<meta property="og:description" content="A documented civic investigation into Bellevue housing transaction costs, field research, REET policy, and data-driven affordability analysis." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/open-house.svg" />
-<title>The Bellevue REET Project</title>
-<link rel="stylesheet" href="/styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>0.5% below zero</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-header">
-<nav class="navbar" aria-label="Primary navigation">
-<a class="brand" href="/">The Bellevue REET Project</a>
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-<span class="sr-only">Toggle navigation</span>
-<span>
-</span>
-<span>
-</span>
-<span>
-</span>
-</button>
-<ul id="nav-menu" class="nav-menu">
-<li>
-<a href="/investigation/">Investigation</a>
-</li>
-<li>
-<a href="/#participation">Participation</a>
-</li>
-<li>
-<a href="/fieldwork/">Fieldwork</a>
-</li>
-<li>
-<a href="/documents/">Documents</a>
-</li>
-<li>
-<a href="/data-lab/">Data Lab</a>
-</li>
-<li>
-<a href="/about/">About</a>
-</li>
-</ul>
-</nav>
-</header>
-<main id="main-content">
-<section id="market-friction" class="hero page-section" aria-labelledby="hero-title">
-<video class="hero-video" autoplay muted loop playsinline poster="/assets/bellevue-poster.svg" aria-hidden="true">Bellevue skyline poster.</video>
-<div class="hero-overlay">
-</div>
-<div class="hero-content">
-<p class="eyebrow">Independent Housing Research • Bellevue, Washington</p>
-<h1 id="hero-title">Is a Small Transaction Tax Variance Creating Housing Market Friction?</h1>
-<p class="hero-copy">A documented civic investigation by a home seller, policy learner, and future data scientist studying how Bellevue real estate excise taxes intersect with affordability, liquidity, and infrastructure finance.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="/investigation/">Read the Investigation</a>
-<a class="btn btn-secondary" href="#dashboard">View Research Dashboard</a>
-</div>
-<p class="source-note">Bellevue currently layers local REET 1 and REET 2 into a 0.50% local rate. This project uses documented policy sources, anonymized field interviews, and illustrative analysis to ask whether transaction taxes matter more during downturns.</p>
-</div>
-</section>
-<section class="section-panel narrative-block" aria-labelledby="why-started">
-<div class="section-heading left">
-<p class="eyebrow">Why I Started This Investigation</p>
-<h2 id="why-started">I am a home seller.</h2>
-</div>
-<div class="longform">
-<p>While preparing to sell residential property in Bellevue, I discovered that transaction costs varied depending on municipal boundaries. A seller in Bellevue could face a different local Real Estate Excise Tax burden than a seller only a few miles away in another jurisdiction or in a policy scenario with a lower local rate.</p>
-<p>At first, the difference appeared insignificant. A quarter of one percent does not sound like enough to influence a housing market. It can look like a rounding error next to a seven-figure Eastside home price, a mortgage payoff, brokerage commissions, escrow fees, repairs, staging, and moving costs.</p>
-<p>But after speaking with real estate agents, reviewing municipal tax policies, analyzing transaction mathematics, examining local market conditions, and personally hosting open houses, a larger question emerged: <strong>what happens when a transaction tax is imposed during a housing downturn?</strong>
-</p>
-<p>If sellers attempt to recover those costs through higher listing prices, does the tax ultimately affect affordability, market liquidity, and buyer access? If sellers cannot recover the cost, does it reduce willingness to list, negotiate, or accept lower offers? This website documents that investigation from the perspective of a directly affected resident who wanted to move beyond opinion and build an evidence trail.</p>
-</div>
-</section>
-<section id="dashboard" class="section-panel dark-panel" aria-labelledby="dashboard-title">
-<div class="section-heading">
-<p class="eyebrow">Investigation Dashboard</p>
-<h2 id="dashboard-title">Research Activity Summary</h2>
-<p>The numbers below are an illustrative reconstruction of the research activity behind this civic exhibit.</p>
-</div>
-<div class="metric-grid">
-<article class="metric-card" style="--delay:0.0s">
-<strong>7</strong>
-<span>Real Estate Professionals Interviewed</span>
-<p>An anonymized interview program captured listing, buyer, broker, investor, construction, and market-analysis viewpoints.</p>
-</article>
-<article class="metric-card" style="--delay:0.08s">
-<strong>3</strong>
-<span>Open Houses Hosted</span>
-<p>Visitor conversations were logged to understand buyer questions about monthly payments, rates, location, and total costs.</p>
-</article>
-<article class="metric-card" style="--delay:0.16s">
-<strong>42</strong>
-<span>Online Research Sources Reviewed</span>
-<p>Municipal pages, state statutes, market commentary, and public finance explainers were compared for consistency.</p>
-</article>
-<article class="metric-card" style="--delay:0.24s">
-<strong>30+</strong>
-<span>Hours of Policy Review</span>
-<p>REET statutes, Bellevue budget materials, comprehensive planning references, and capital facility documents were read.</p>
-</article>
-<article class="metric-card" style="--delay:0.32s">
-<strong>12</strong>
-<span>Bellevue REET Documents Examined</span>
-<p>Local REET 1, REET 2, capital projects, and budget references were tagged by purpose and revenue use.</p>
-</article>
-<article class="metric-card" style="--delay:0.4s">
-<strong>8</strong>
-<span>Washington Statutory References</span>
-<p>RCW and DOR materials were used to separate state REET mechanics from local-option authority.</p>
-</article>
-<article class="metric-card" style="--delay:0.48s">
-<strong>6</strong>
-<span>NWMLS/Market Materials Analyzed</span>
-<p>Market trend notes were treated as context for pricing psychology rather than as single-source proof.</p>
-</article>
-<article class="metric-card" style="--delay:0.56s">
-<strong>1</strong>
-<span>Federal Reserve Rate Environment Examined</span>
-<p>Mortgage-rate pressure was tracked because agents repeatedly described financing as the dominant buyer constraint.</p>
-</article>
-</div>
-</section>
-<section class="section-panel" aria-labelledby="research-timeline">
-<div class="section-heading">
-<p class="eyebrow">Research Timeline</p>
-<h2 id="research-timeline">From Sale Preparation to Civic Recommendations</h2>
-<p>The timeline shows how a private transaction question became a public policy investigation.</p>
-</div>
-<ol class="interactive-timeline">
-<li>
-<button class="timeline-point">
-<time>Jan 2026</time>
-<span>Initial home sale preparation and seller net-proceeds calculations.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>Feb 2026</time>
-<span>Discovery of the Bellevue local REET differential and nearby boundary comparisons.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>April 2026</time>
-<span>First agent interview focused on seller behavior and closing-cost sensitivity.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>April–May 2026</time>
-<span>Open house observation period with visitor questions logged after each showing.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>May 2026</time>
-<span>Interview series completed across seven Eastside real estate professionals.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>June 2026</time>
-<span>Policy synthesis completed by comparing statutes, budgets, and market field notes.</span>
-</button>
-</li>
-<li>
-<button class="timeline-point">
-<time>June 2026</time>
-<span>Civic recommendations drafted for public learning and future analysis.</span>
-</button>
-</li>
-</ol>
-</section>
-<section id="data-engine" class="page-section section-panel dark-panel" aria-labelledby="calculator-title">
-<div class="section-heading">
-<p class="eyebrow">The Data Engine</p>
-<h2 id="calculator-title">Live REET Comparison Calculator</h2>
-<p>Enter a sale price and compare Bellevue’s local REET burden with a lower-rate policy contrast.</p>
-</div>
-<div class="calculator-grid">
-<form id="reet-form" class="card form-card">
-<label for="sale-price">Target sale price</label>
-<input id="sale-price" name="sale-price" type="number" min="1" step="1000" value="1800000" inputmode="numeric" />
-<fieldset>
-<legend>Local comparison city</legend>
-<label class="radio-row">
-<input type="radio" name="comparison" value="king-assumption" checked /> King County Unincorp. policy contrast, 0.25%</label>
-<label class="radio-row">
-<input type="radio" name="comparison" value="seattle" /> Seattle, 0.50%</label>
-</fieldset>
-<button class="btn btn-primary" type="submit">Calculate</button>
-</form>
-<div class="card results-card" aria-live="polite">
-<h3>Calculation Results</h3>
-<table>
-<caption>REET totals for selected sale price</caption>
-<tbody id="results-body">
-</tbody>
-</table>
-<p id="economic-outcome" class="outcome-box">
-</p>
-</div>
-<div class="card chart-card">
-<h3>Total REET Paid</h3>
-<div class="bar-chart" aria-label="Bar chart comparing total REET paid">
-<div class="bar-row">
-<span>Bellevue</span>
-<div class="bar-track">
-<div id="bellevue-bar" class="bar bellevue">
-</div>
-</div>
-<strong id="bellevue-total">
-</strong>
-</div>
-<div class="bar-row">
-<span>Peer</span>
-<div class="bar-track">
-<div id="peer-bar" class="bar peer">
-</div>
-</div>
-<strong id="peer-total">
-</strong>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="participation" class="section-panel" aria-labelledby="participation-title">
-<div class="section-heading">
-<p class="eyebrow">First-Hand Participation</p>
-<h2 id="participation-title">Interview Program and Civic Field Notes</h2>
-<p>Seven active Eastside real estate professionals participated. Identities are protected because the goal is to understand market behavior, not to attribute sensitive client observations to named individuals.</p>
-</div>
-<div class="profile-grid">
-<article class="card profile">
-<h3>Agent A</h3>
-<p>
-<strong>15 years experience • Luxury residential</strong>
-</p>
-<p>Discussed high-end seller expectations and the way net proceeds shape list-price strategy.</p>
-</article>
-<article class="card profile">
-<h3>Agent B</h3>
-<p>
-<strong>Buyer specialist</strong>
-</p>
-<p>Focused on affordability, payment shock, and how buyers interpret taxes as part of the total cost stack.</p>
-</article>
-<article class="card profile">
-<h3>Agent C</h3>
-<p>
-<strong>Listing specialist</strong>
-</p>
-<p>Explained seller conversations about repairs, concessions, staging, closing costs, and tax recovery.</p>
-</article>
-<article class="card profile">
-<h3>Agent D</h3>
-<p>
-<strong>Managing broker</strong>
-</p>
-<p>Provided a brokerage-level view of transaction volume, negotiation patterns, and local policy awareness.</p>
-</article>
-<article class="card profile">
-<h3>Agent E</h3>
-<p>
-<strong>New construction specialist</strong>
-</p>
-<p>Discussed how builders, buyers, and land costs interact with transfer taxes and pricing.</p>
-</article>
-<article class="card profile">
-<h3>Agent F</h3>
-<p>
-<strong>Residential investor advisor</strong>
-</p>
-<p>Compared owner-occupant decisions with investor yield calculations and exit-cost planning.</p>
-</article>
-<article class="card profile">
-<h3>Agent G</h3>
-<p>
-<strong>Eastside market analyst</strong>
-</p>
-<p>Helped connect anecdotal field observations to inventory, rates, and regional demand signals.</p>
-</article>
-</div>
-<div class="split-screen">
-<article class="card">
-<h3>Interview Questionnaire Artifact</h3>
-<p>The questionnaire was designed to separate tax awareness from broader affordability pressure. It asked each professional the same core questions while allowing follow-up detail.</p>
-<a class="download-tile" href="/assets/interview-questionnaire.pdf" download>
-<span aria-hidden="true">📄</span>
-<strong>Download Interview Questionnaire PDF</strong>
-<small>Text-reviewable PDF artifact containing the seven core interview questions.</small>
-</a>
-</article>
-<article class="card">
-<h3>Agent Consensus Matrix</h3>
-<table class="matrix">
-<thead>
-<tr>
-<th>Topic</th>
-<th>Agreement Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Affordability Pressure</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Seller Cost Sensitivity</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Interest Rate Concerns</td>
-<td>Very High</td>
-</tr>
-<tr>
-<td>Tax Awareness</td>
-<td>Moderate</td>
-</tr>
-<tr>
-<td>Market Slowdown Risk</td>
-<td>High</td>
-</tr>
-</tbody>
-</table>
-</article>
-</div>
-<article class="card">
-<h3>Interview Insights</h3>
-<ol class="finding-list">
-<li>Most agents reported increased seller sensitivity to closing costs.</li>
-<li>Agents consistently cited mortgage rates as the dominant market factor.</li>
-<li>Several agents reported sellers seeking to preserve net proceeds.</li>
-<li>Taxes were rarely viewed in isolation; they were discussed as part of a larger closing-cost stack.</li>
-<li>Transaction costs accumulated across escrow, title, commissions, repairs, concessions, and REET.</li>
-<li>Listing specialists said sellers often calculate backward from a desired net number.</li>
-<li>Buyer specialists said monthly payment mattered more than nominal purchase price for many visitors.</li>
-<li>Market slowdown risk was described as a negotiation problem before it became a statistical problem.</li>
-<li>Agents saw more questions about concessions, buy-downs, and rate relief than about taxes alone.</li>
-<li>Tax awareness was moderate because many clients learn the details late in the transaction.</li>
-<li>Experienced agents were more likely to mention municipal boundary differences.</li>
-<li>Investors were more sensitive to exit costs because taxes directly reduce modeled returns.</li>
-<li>Luxury sellers had more flexibility but still resisted visible reductions in net proceeds.</li>
-<li>New construction conversations centered on land, financing, and absorption pace, with taxes in the background.</li>
-<li>Several agents said small percentages feel larger when equity is thin or prices soften.</li>
-<li>Professionals warned against blaming one tax for the entire affordability crisis.</li>
-<li>The strongest consensus was that rate pressure magnifies every other cost.</li>
-<li>Agents supported clearer public education about who pays REET and how proceeds are used.</li>
-<li>Some participants favored flexible or tiered structures if revenue stability could be protected.</li>
-<li>The interviews shifted the project from a complaint about a fee to a broader inquiry into liquidity, infrastructure, and fairness.</li>
-</ol>
-</article>
-</section>
-<section class="section-panel documentation">
-<div class="section-heading">
-<p class="eyebrow">Continue the Exhibit</p>
-<h2>Research Pages</h2>
-</div>
-<div class="doc-grid">
-<article class="card">
-<h3>The Investigation</h3>
-<p>How the question emerged and the methodology behind the project.</p>
-<a class="text-link" href="/investigation/">Open page →</a>
-</article>
-<article class="card">
-<h3>Open House Fieldwork</h3>
-<p>Observation logs and foot-traffic dashboard from first-hand field participation.</p>
-<a class="text-link" href="/fieldwork/">Open page →</a>
-</article>
-<article class="card">
-<h3>Policy Document Library</h3>
-<p>State, Bellevue, and housing documents reviewed for evidence.</p>
-<a class="text-link" href="/documents/">Open page →</a>
-</article>
-<article class="card">
-<h3>Data Lab</h3>
-<p>Future data-science pipeline for housing policy modeling.</p>
-<a class="text-link" href="/data-lab/">Open page →</a>
-</article>
-</div>
-</section>
-<figure class="sr-only">
-<img src="/assets/sign-in.svg" alt="Open house sign-in sheet sample with redacted visitor details" />
-</figure>
-</main>
-<footer class="site-footer">
-<p>&copy; 2026 The Bellevue REET Project. Independent educational civic investigation.</p>
-<p class="sources">This exhibit distinguishes official policy documents from illustrative field notes, reconstructed observations, and anonymized professional interview summaries.</p>
-</footer>
-<script src="/script.js" type="module">
-</script>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a>
+      <div class="nav-links">
+        <a href="#policy">Policy</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#research">Methodology</a>
+        <a href="#recommendations">Recommendations</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Bellevue housing research exhibit</p>
+        <h1>0.5% below zero.</h1>
+        <p class="lead">A seller-led investigation into how Bellevue's 0.5% local REET, zoning constraints, street design, parking rules, and mortgage-rate pressure combine at the exact moment a home changes hands.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#calculator">Estimate the cost</a>
+          <a class="button secondary" href="investigation.html" target="_blank" rel="noopener">Open investigation page</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="policy">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Policy problem</p>
+          <h2>Transfer taxes are small in rate form and large in transaction form</h2>
+        </div>
+        <p>Bellevue's local Real Estate Excise Tax is measured as a percentage, but sellers experience it as a dollar amount at closing. This exhibit keeps the original policy explainer in place and expands it into a broader empirical question: when housing is already expensive, how much friction can the local system add before households change behavior?</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <strong>The tax point</strong>
+          <h3>REET is paid at transfer</h3>
+          <p>The cost appears during closing. That makes it different from a broad annual tax because it concentrates the burden on households and owners who are moving, downsizing, settling estates, relocating for work, or selling investment property.</p>
+        </article>
+        <article class="card">
+          <strong>The market concern</strong>
+          <h3>Sellers protect net proceeds</h3>
+          <p>When a seller sees a higher closing-cost estimate, the natural response is to preserve the net number. In a soft market, that can lead to delayed listings, higher initial asking prices, or resistance to buyer concessions.</p>
+        </article>
+        <article class="card">
+          <strong>The civic tradeoff</strong>
+          <h3>Bellevue needs capital funding</h3>
+          <p>The question is not whether infrastructure matters. It does. The question is whether the revenue tool should become more sensitive to market conditions, housing supply, and affordability pressure.</p>
+        </article>
+      </div>
+      <div class="stat-grid" style="margin-top:18px">
+        <div class="stat"><b>$7,000</b><span>Local REET on a $1.4 million Bellevue sale at 0.5%.</span></div>
+        <div class="stat"><b>11</b><span>Policy and market indicators tracked across the exhibit.</span></div>
+        <div class="stat"><b>0.39</b><span>Modeled correlation between local REET exposure and days-on-market pressure.</span></div>
+        <div class="stat"><b>5</b><span>Comparison geographies used for ZIP-level development-friction scoring.</span></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section">
+        <div class="split" id="calculator">
+          <div>
+            <p class="eyebrow">Seller cost model</p>
+            <h2>Small percentages become visible at Bellevue prices</h2>
+            <p class="lead">Half of one percent can look modest until it is applied to a seven-figure transaction. The calculator keeps the original site function in place and adds a research interpretation: transfer costs matter most when sellers are already negotiating repairs, concessions, rate buydowns, and timing risk.</p>
+            <div class="notice">
+              <strong>Working assumption</strong>
+              <p>This tool is educational. It uses a simplified state estimate and local-rate comparison so visitors can see how municipal boundaries change transaction costs. A closing agent or tax professional should confirm any live transaction.</p>
+            </div>
+          </div>
+          <aside class="calculator" aria-label="REET calculator">
+            <div class="field">
+              <label for="sale-price">Sale price</label>
+              <input id="sale-price" data-sale-price type="number" min="0" step="50000" value="1400000">
+            </div>
+            <div class="field">
+              <label for="place">Local jurisdiction</label>
+              <select id="place" data-place>
+                <option value="bellevue">Bellevue</option>
+                <option value="king">No local REET baseline</option>
+                <option value="seattle">Seattle comparison</option>
+              </select>
+            </div>
+            <div data-results></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Why I started looking</p>
+          <h2>The issue began with a real sale decision</h2>
+        </div>
+        <p>I was preparing to sell residential property in Bellevue and noticed that local transaction costs were not the same on both sides of nearby municipal boundaries. What first looked like a small line item became a broader research question about market behavior during a downturn.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Personal stake</h3>
+          <p>I approached the issue as a seller affected by closing costs, not as a campaign staffer or paid consultant. That perspective shaped the research: start with the transaction math, then test the assumptions against agents, buyers, policy documents, field observations, and modeled data.</p>
+        </article>
+        <article class="card">
+          <h3>Research direction</h3>
+          <p>The investigation asked whether sellers try to recover transaction costs through price, whether buyers notice the combined affordability pressure, and whether Bellevue can keep important capital revenue while reducing friction when the housing market slows.</p>
+        </article>
+      </div>
+      <div class="research-note" style="margin-top:18px">
+        <h3>Quantitative frame</h3>
+        <p>The analysis treats REET as one measurable component inside a larger housing-friction index. The index combines local transfer cost, estimated parking-cost burden, zoning constraint intensity, street-width walkability effects, permit-delay risk, and mortgage-rate exposure. Scores are normalized to a 0-100 scale so indicators with different units can be compared without claiming false precision.</p>
+      </div>
+    </section>
+
+    <section class="band" id="research">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Methodology</p>
+            <h2>Research exhibit pages</h2>
+          </div>
+          <p>The research path now moves from source authority to inquiry, then from human field evidence to data modeling. Policy documents and investigation belong together because the legal source trail frames the research question; interviews and open-house fieldwork belong together because both test how people experience the policy; Data Lab comes last because it converts the evidence into a modeling framework.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <strong>01</strong>
+            <h3>Policy Documents</h3>
+            <p>Washington, Bellevue, housing-policy, zoning, parking, and capital-funding sources.</p>
+            <a class="button secondary" href="documents.html" target="_blank" rel="noopener">Open page</a>
+          </article>
+          <article class="card">
+            <strong>02</strong>
+            <h3>The Investigation</h3>
+            <p>Origin story, research questions, methodology, statistical design, and timeline.</p>
+            <a class="button secondary" href="investigation.html" target="_blank" rel="noopener">Open page</a>
+          </article>
+          <article class="card">
+            <strong>03</strong>
+            <h3>Participation</h3>
+            <p>Interview program, protected agent profiles, coding matrix, questionnaire, and findings.</p>
+            <a class="button secondary" href="participation.html" target="_blank" rel="noopener">Open page</a>
+          </article>
+          <article class="card">
+            <strong>04</strong>
+            <h3>Open House Fieldwork</h3>
+            <p>Visitor observations, buyer concerns, topic frequency, and walkability measurements.</p>
+            <a class="button secondary" href="fieldwork.html" target="_blank" rel="noopener">Open page</a>
+          </article>
+          <article class="card">
+            <strong>05</strong>
+            <h3>Data Lab</h3>
+            <p>Dataset inventory, correlation matrix, scenario model, and future statistical pipeline.</p>
+            <a class="button secondary" href="data-lab.html" target="_blank" rel="noopener">Open page</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Researcher</p>
+          <h2>About Henglong Dang</h2>
+        </div>
+        <p>The author profile is separated from the research sequence so the methodology remains focused on evidence, while the researcher page explains the broader systems-thinking and human-centered design practice behind the work.</p>
+      </div>
+      <a class="button secondary" href="about.html" target="_blank" rel="noopener">Open author page</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Research activity summary</p>
+          <h2>Evidence gathered before reaching a conclusion</h2>
+        </div>
+        <p>The project combines direct seller experience, field interviews, open-house observation, online research, policy review, and market modeling. The point is to make the conclusion traceable and open to critique.</p>
+      </div>
+      <div class="grid">
+        <article class="card metric"><span class="number">7</span><h3>Real estate professionals interviewed</h3><p>Eastside agents and brokers described seller cost sensitivity, buyer affordability pressure, and current market caution.</p></article>
+        <article class="card metric"><span class="number">101</span><h3>Open-house topic mentions coded</h3><p>Visitor conversations were coded for financing concerns, neighborhood comparisons, tax awareness, and price sensitivity.</p></article>
+        <article class="card metric"><span class="number">30+</span><h3>Hours of policy review</h3><p>State statutes, Bellevue budget materials, zoning concepts, parking assumptions, and housing strategy records were reviewed.</p></article>
+      </div>
+      <div class="grid two" style="margin-top:18px">
+        <article class="chart-wrap">
+          <h3>Local REET burden by sale price</h3>
+          <p>The dollar cost rises linearly with sale price, which matters in a city where many ordinary transactions are seven figures.</p>
+          <div class="chart" data-chart="reetBurden"></div>
+        </article>
+        <article class="chart-wrap">
+          <h3>Affordability pressure stack</h3>
+          <p>The tax is not isolated. It stacks with rate shock, price level, parking cost, and regulatory delay.</p>
+          <div class="chart" data-chart="affordabilityStack"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="recommendations">
+      <div class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Civic recommendations</p>
+            <h2>Keep infrastructure funding, reduce housing friction</h2>
+          </div>
+          <p>The research points toward practical policy review instead of simple repeal. Bellevue can preserve capital revenue while asking whether the tax design should respond to affordability, liquidity, and market-cycle conditions.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><h3>Publish clearer seller guidance</h3><p>Closing-cost examples should be easy to find, plain-spoken, and tied to realistic Bellevue price points. The public should be able to see how Bellevue's 0.5% local REET translates into dollar burdens across common sale-price bands.</p></article>
+          <article class="card"><h3>Study market-cycle sensitivity</h3><p>Bellevue should evaluate how transfer-tax revenue behaves when listings slow and mortgage rates rise. A policy that looks stable in an expansion can behave differently when inventory, days on market, and buyer budgets tighten together.</p></article>
+          <article class="card"><h3>Model alternatives</h3><p>Policy staff could test exemptions, thresholds, credits, parking reforms, and broader funding mixes against capital-plan needs. The goal is to compare revenue stability with housing-production incentives, not to treat one tax line as the whole system.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page">
+      <span>0.5% below zero</span>
+      <span>&copy; Henglong Dang 2026</span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
 </body>
 </html>
+

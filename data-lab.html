@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Data Lab | 0.5% below zero</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a><div class="nav-links"><a href="index.html">Main page</a><a href="documents.html" target="_blank" rel="noopener">Documents</a><a href="about.html" target="_blank" rel="noopener">About</a></div></nav></header>
+  <main>
+    <section class="page-hero"><div class="page"><p class="eyebrow">Data lab</p><h1>Turning a civic question into a data science research platform</h1><p class="lead">The next version of the work will convert qualitative findings, public records, parcel indicators, and market variables into a structured analysis pipeline.</p></div></section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Dataset inventory</p><h2>Inputs for future modeling</h2></div><p>The project is designed to grow from manual research into a reproducible housing-policy analysis system. Each dataset has a different role: some explain law, some explain market pressure, and some explain built-environment constraints.</p></div>
+      <div class="grid">
+        <article class="card"><h3>Housing prices</h3><p>Sale and listing trends by geography, price band, and property type. Planned variables include sale price, list price, days on market, price reductions, concessions, and relist behavior.</p></article>
+        <article class="card"><h3>Mortgage rates</h3><p>Federal Reserve and market-rate context for buyer affordability. Rates are used as a control variable because interviews identified them as the strongest affordability force.</p></article>
+        <article class="card"><h3>REET schedules</h3><p>State and local rates by jurisdiction and transaction size. These create the direct transfer-cost variable.</p></article>
+        <article class="card"><h3>Local tax rates</h3><p>Comparable municipal cost structures across nearby communities. These allow boundary comparisons and sensitivity testing.</p></article>
+        <article class="card"><h3>Interview coding results</h3><p>Themes from seven professional conversations, tagged by topic, concern intensity, and agreement level.</p></article>
+        <article class="card"><h3>Open house observations</h3><p>Visitor concern categories, repeated questions, buyer type notes, and neighborhood comparison comments.</p></article>
+        <article class="card"><h3>Policy documents</h3><p>Source metadata, statutory references, capital-plan links, zoning assumptions, parking references, and policy takeaways.</p></article>
+        <article class="card"><h3>Built-environment indicators</h3><p>Street width, traffic exposure, walkability proxy, parking burden, and ZIP-level development-friction scores.</p></article>
+      </div>
+    </section>
+
+    <section class="band" id="correlations"><div class="section">
+      <div class="section-head"><div><p class="eyebrow">Correlation structure</p><h2>How the variables relate</h2></div><p>The model uses correlation-style analysis to identify patterns that deserve deeper testing. Correlation is not causation, but it helps decide which variables belong in a larger regression model.</p></div>
+      <div class="chart-wrap"><h3>Modeled correlation matrix</h3><p>Rates show the strongest association with days-on-market pressure. REET is moderate, while zoning and parking appear as structural cost channels.</p><div class="chart" data-chart="correlationMatrix"></div></div>
+      <div class="research-note" style="margin-top:18px"><h3>Confidence discussion</h3><p>The matrix is a research model built from observed themes and illustrative variables. It should be read as a transparent hypothesis map. A production version would require transaction-level data, neighborhood fixed effects, property controls, and enough observations to estimate confidence intervals.</p></div>
+    </div></section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Comparative geography</p><h2>ZIP-level development friction</h2></div><p>Geographic comparison helps prevent the project from treating Bellevue as one uniform market. Different ZIP-code areas can face different combinations of price, infrastructure, zoning, parking, and buyer demand.</p></div>
+      <div class="grid two">
+        <article class="chart-wrap"><h3>Development-friction index by ZIP</h3><p>The index compares modeled constraints across Bellevue ZIP-code areas. Higher scores indicate a stronger stack of cost and production barriers.</p><div class="chart" data-chart="zipComparison"></div></article>
+        <article class="card"><h3>Method</h3><p>The ZIP index combines five inputs: estimated price level, local transaction-cost exposure, zoning constraint score, parking burden, and infrastructure complexity. Each input is normalized to 0-100 and averaged with weights that can be adjusted in later versions.</p><p>Interpretation should be comparative. A higher score does not mean a neighborhood is worse; it means the housing system may face more production or transaction friction there.</p></article>
+      </div>
+    </section>
+
+    <section class="band"><div class="section">
+      <div class="section-head"><div><p class="eyebrow">Future analysis pipeline</p><h2>From manual review to policy simulation</h2></div><p>Each phase adds structure without pretending the current evidence is more precise than it is.</p></div>
+      <div class="timeline">
+        <div class="timeline-item"><time>Phase 1</time><div><h3>Manual analysis</h3><p>Organize findings, source notes, calculator assumptions, and interview codes.</p></div></div>
+        <div class="timeline-item"><time>Phase 2</time><div><h3>Structured database</h3><p>Convert rates, documents, observations, parcel indicators, and interview codes into tables.</p></div></div>
+        <div class="timeline-item"><time>Phase 3</time><div><h3>Statistical modeling</h3><p>Test relationships between prices, rates, inventory, days on market, zoning, parking, and transaction costs.</p></div></div>
+        <div class="timeline-item"><time>Phase 4</time><div><h3>Predictive housing models</h3><p>Estimate liquidity and affordability changes under different market conditions.</p></div></div>
+        <div class="timeline-item"><time>Phase 5</time><div><h3>Policy simulation engine</h3><p>Compare revenue stability and market friction across alternative tax structures, parking reforms, and zoning scenarios.</p></div></div>
+      </div>
+      <div class="chart-wrap" style="margin-top:18px"><h3>Projected data pipeline growth</h3><p>The pipeline grows from manual notes into a structured simulation dataset.</p><div class="chart" data-chart="dataPipeline"></div></div>
+    </div></section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">Regression-style interpretation</p><h2>What a formal model would test</h2></div><p>The current exhibit uses transparent assumptions. A stronger future version would estimate whether local cost variables remain meaningful after controlling for rates, property type, price band, and seasonality.</p></div>
+      <div class="grid two">
+        <article class="chart-wrap"><h3>Regulatory friction and monthly cost</h3><p>The scatter plot frames a regression question: does higher policy friction align with higher modeled monthly cost after controls are introduced?</p><div class="chart" data-chart="affordabilityScatter"></div></article>
+        <article class="card"><h3>Candidate model</h3><p>Outcome: days on market, price reduction probability, or monthly payment burden. Predictors: local REET exposure, mortgage rate, parking-cost estimate, zoning constraint score, price band, property type, and month. A full model would report coefficients, standard errors, confidence intervals, and residual diagnostics.</p><p>The exhibit's current role is to define variables and show why the model is worth building.</p></article>
+      </div>
+    </section>
+
+    <section class="band"><div class="section">
+      <div class="section-head"><div><p class="eyebrow">Machine learning expansion</p><h2>Portfolio direction</h2></div><p>The project can support a practical data science portfolio because the question has real-world constraints, messy data, and policy consequences.</p></div>
+      <div class="grid">
+        <article class="card"><h3>Housing liquidity prediction</h3><p>Estimate whether added costs affect listing timing and days on market.</p></article>
+        <article class="card"><h3>Market friction modeling</h3><p>Compare how taxes, rates, zoning, parking, and concessions interact under different conditions.</p></article>
+        <article class="card"><h3>Municipal tax simulations</h3><p>Model revenue under thresholds, exemptions, credits, and rate changes.</p></article>
+        <article class="card"><h3>Policy impact forecasting</h3><p>Test how reform options might affect both city revenue and seller behavior.</p></article>
+        <article class="card"><h3>Geographic affordability mapping</h3><p>Map payment pressure across Bellevue and nearby communities.</p></article>
+      </div>
+      <div class="hero-actions"><a class="button secondary" href="about.html" target="_blank" rel="noopener">About the Author</a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="page"><span>0.5% below zero</span><span>&copy; Henglong Dang 2026</span></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>
+

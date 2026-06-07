@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Bellevue housing research map</title>
+  <desc id="desc">Layered civic map illustration with streets, parcels, housing markers, and policy analysis overlays.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4efe2"/>
+      <stop offset="0.46" stop-color="#dfe9e4"/>
+      <stop offset="1" stop-color="#b6c7c2"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#26433d" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <path d="M0 770 C260 690 440 760 650 700 C860 640 1030 530 1240 590 C1390 635 1485 680 1600 650 L1600 1000 L0 1000 Z" fill="#7d9a8c" opacity="0.72"/>
+  <path d="M0 850 C220 810 440 840 650 790 C880 735 1045 685 1250 735 C1410 774 1510 780 1600 742 L1600 1000 L0 1000 Z" fill="#445d55" opacity="0.58"/>
+  <g opacity="0.68" fill="none" stroke="#f8f5ed" stroke-width="18" stroke-linecap="round">
+    <path d="M175 880 C420 660 705 590 1010 520 C1190 480 1360 390 1500 250"/>
+    <path d="M400 950 C520 790 580 600 620 380 C660 190 780 95 970 60"/>
+    <path d="M900 900 C865 720 900 560 1010 415 C1115 275 1210 160 1230 30"/>
+  </g>
+  <g opacity="0.7" fill="none" stroke="#2c4b44" stroke-width="4">
+    <path d="M120 735 H1440"/>
+    <path d="M220 660 H1320"/>
+    <path d="M330 580 H1510"/>
+    <path d="M450 500 H1380"/>
+    <path d="M550 420 H1470"/>
+    <path d="M650 340 H1325"/>
+    <path d="M255 255 V900"/>
+    <path d="M410 185 V870"/>
+    <path d="M565 120 V835"/>
+    <path d="M720 85 V805"/>
+    <path d="M875 60 V810"/>
+    <path d="M1030 80 V840"/>
+    <path d="M1185 115 V880"/>
+    <path d="M1340 170 V905"/>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="965" y="355" width="270" height="190" rx="8" fill="#fbfbf7" opacity="0.94"/>
+    <rect x="1000" y="395" width="44" height="92" fill="#cf6f53"/>
+    <rect x="1064" y="380" width="56" height="108" fill="#e1ad5b"/>
+    <rect x="1144" y="415" width="52" height="74" fill="#6a8f86"/>
+    <path d="M987 395 L1022 360 L1058 395 Z" fill="#38564f"/>
+    <path d="M1048 380 L1092 340 L1138 380 Z" fill="#38564f"/>
+    <path d="M1128 415 L1170 382 L1210 415 Z" fill="#38564f"/>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="450" y="525" width="330" height="210" rx="8" fill="#fbfbf7" opacity="0.92"/>
+    <path d="M485 640 C540 575 602 570 650 620 C705 677 752 665 760 600" fill="none" stroke="#cf6f53" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="520" cy="650" r="20" fill="#38564f"/>
+    <circle cx="642" cy="612" r="20" fill="#cf6f53"/>
+    <circle cx="740" cy="600" r="20" fill="#e1ad5b"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" fill="#223d37">
+    <text x="1010" y="618" font-size="28" font-weight="700">0.5% local REET</text>
+    <text x="1010" y="654" font-size="20">Bellevue seller-side transaction cost</text>
+    <text x="470" y="795" font-size="28" font-weight="700">Market friction field notes</text>
+    <text x="470" y="830" font-size="20">Interviews, open houses, documents, and data</text>
+  </g>
+  <g fill="#cf6f53" opacity="0.9">
+    <circle cx="1120" cy="300" r="12"/>
+    <circle cx="1250" cy="520" r="12"/>
+    <circle cx="720" cy="455" r="12"/>
+    <circle cx="540" cy="690" r="12"/>
+    <circle cx="905" cy="650" r="12"/>
+  </g>
+</svg>
