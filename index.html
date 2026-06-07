@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="index.html"><span class="brand-mark">0.5</span><span>0.5% below zero</span></a>
       <div class="nav-links">
         <a href="#policy">Policy</a>
@@ -19,7 +20,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="hero-inner">
         <p class="eyebrow">Bellevue housing research exhibit</p>
@@ -90,7 +91,7 @@
                 <option value="seattle">Seattle comparison</option>
               </select>
             </div>
-            <div data-results></div>
+            <div data-results aria-live="polite"></div>
           </aside>
         </div>
       </div>
@@ -229,4 +230,3 @@
   <script src="site.js"></script>
 </body>
 </html>
-
