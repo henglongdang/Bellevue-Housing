@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://henglongdang.github.io/Bellevue-Housing/sitemap.xml
