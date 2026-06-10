@@ -1229,6 +1229,13 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .exhibit-hero,
+  .hero-copy,
+  .page-hero .page {
+    min-width: 0;
+    overflow: hidden;
+  }
+
   .hero-visual {
     min-height: 380px;
   }
@@ -1261,7 +1268,7 @@ select {
   .exhibit-hero,
   .page,
   .section {
-    width: calc(100% - 44px);
+    width: calc(100% - 64px);
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
@@ -1334,9 +1341,16 @@ select {
   .subtitle,
   .hero-copy,
   .hook,
+  .page-hero h1,
+  .page-hero .lead,
   .keyword-strip span {
     max-width: 100%;
     overflow-wrap: anywhere;
+  }
+
+  .keyword-strip {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .hero-copy {
