@@ -275,6 +275,7 @@ a {
 }
 
 .friction-layer {
+  width: calc(100% - var(--offset, 0px));
   min-height: 48px;
   padding: 12px 14px;
   display: flex;
@@ -286,14 +287,20 @@ a {
   border-radius: 8px;
   color: #e2e8f0;
   background: rgba(15, 23, 42, 0.78);
-  transform: translateX(var(--offset, 0));
+  transform: translateX(var(--offset, 0px));
 }
 
 .friction-layer b {
+  flex: 0 0 auto;
   color: #fff;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+.friction-layer span {
+  min-width: 0;
+  text-align: right;
 }
 
 .friction-path {
@@ -1067,7 +1074,16 @@ select {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
+  color: var(--graphite);
   background: var(--panel);
+}
+
+.impact-output .eyebrow {
+  color: #9a3412;
+}
+
+.impact-output p:not(.eyebrow) {
+  color: var(--slate);
 }
 
 .impact-meter {
