@@ -14,13 +14,12 @@ A static civic data website scaffold exploring how Bellevue's local real estate 
 - Mobilize page with a mailto council form and downloadable text advocacy placeholders.
 - Technical blueprint section covering routes, data models, API plan, and quality expectations.
 
-## Run locally
+[## Run locally
 
 ```bash
 npm start
 ```
-
-Then open <http://127.0.0.1:4173>. The server binds to `0.0.0.0` by default for preview environments and honors `PORT`/`HOST` when provided.
+**OPEN THE WEBPAGE: https://henglongdang.github.io/Bellevue-Housing/
 
 ## Test
 
@@ -28,7 +27,7 @@ Then open <http://127.0.0.1:4173>. The server binds to `0.0.0.0` by default for 
 npm test
 ```
 
-The tests validate the REET calculator math and a small set of accessibility-oriented structural requirements.
+The tests validate the REET calculator math and a small set of accessibility-oriented structural requirements.](https://henglongdang.github.io/Bellevue-Housing/)
 
 ## Source notes
 
